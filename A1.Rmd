@@ -1,29 +1,40 @@
 ---
-title: "A1"
+title: "ETO5513 Assignment 1"
 output: html_document
 date: "2023-05-20"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+options(readr.show_col_types = FALSE)
+library(knitr)
+library(dplyr)
+#library(tidyverse)
+#library(visdat)
+#library(ggplot2)
+#library(gganimate)
+#library(plotly)
+#library(gapminder)
 ```
 
-## R Markdown
+## Research Question
+The data being examined in this assignment is to investigate the relationship between Australia's median age and birth rate trends. This is to determine whether the decrease in birth rates have contributed to Australia's aging population.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Dataset Introduction
+The dataset "population-growth-rate-vs-median-age.csv" is sourced from https://ourworldindata.org/grapher/population-growth-rate-vs-median-age. The dataset contains 5 columns:
+Entity: The country
+Code: Country code relating to Entity
+Year: The year relating to the data point
+NATURAL GROWTH RATE - SEX: ALL - AGE: ALL - VARIANT: ESTIMATES: All - Age: All - Variant: Estimates: Crude birth rate minus the crude death rate. Represents the portion of population growth (or decline) determined exclusively by births and deaths.
+MEDIAN AGE - SEX: ALL - AGE: ALL - VARIANT: ESTIMATES: Age that divides the population in two parts of equal size, that is, there are as many persons with ages above the median as there are with ages below the median.
+Continent: The continent relating to the data point.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r, include=FALSE}
+tb <- read_csv("population-growth-rate-vs-median-age.csv")
+tb <- filter(tb, Entity=="Australia")
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+kable(tb)
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
