@@ -52,6 +52,14 @@ Over this period:
 
 ## Section 5: Data summary
 ```{r}
+tb_grouped = tb %>% group_by(Entity) %>% summarise(data_points = n(),
+                                                   start_year = min(Year),
+                                                   end_year = max(Year)
+                                                   )
+knitr::kable(tb_grouped, format="simple", caption="Australia vs Japan Population Growth - Description of Data")
+```
+
+```{r}
 tb_grouped = tb %>% group_by(Entity) %>% summarise(avg_growth = mean(Growth_Rate),
                                                    start_growth = first(Growth_Rate),
                                                    end_growth = last(Growth_Rate),
@@ -59,7 +67,7 @@ tb_grouped = tb %>% group_by(Entity) %>% summarise(avg_growth = mean(Growth_Rate
                                                    start_age = first(Median_Age),
                                                    end_age = last(Median_Age)
                                                    )
-knitr::kable(tb_grouped, format="simple", caption="Summary of Australia vs Japan Population Growth")
+knitr::kable(tb_grouped, format="simple", caption="Australia vs Japan Population Growth - Summary of Growth and Mean Age")
 ```
   
 Based on the summary of population growth rates and population average age, Japan started with a lower average compared to Australia, however ended with a much __higher__ average age. This is explained by the population growth which for Japan started higher but ended in population decline, while Australia started with a lower growth rate, it still ended in positive territory.

@@ -1552,6 +1552,37 @@ increased from 21.2 to 48.4.</p>
 </div>
 <div id="section-5-data-summary" class="section level2">
 <h2>Section 5: Data summary</h2>
+<pre class="r"><code>tb_grouped = tb %&gt;% group_by(Entity) %&gt;% summarise(data_points = n(),
+                                                   start_year = min(Year),
+                                                   end_year = max(Year)
+                                                   )
+knitr::kable(tb_grouped, format=&quot;simple&quot;, caption=&quot;Australia vs Japan Population Growth - Description of Data&quot;)</code></pre>
+<table>
+<caption>Australia vs Japan Population Growth - Description of
+Data</caption>
+<thead>
+<tr class="header">
+<th align="left">Entity</th>
+<th align="right">data_points</th>
+<th align="right">start_year</th>
+<th align="right">end_year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Australia</td>
+<td align="right">72</td>
+<td align="right">1950</td>
+<td align="right">2021</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="right">72</td>
+<td align="right">1950</td>
+<td align="right">2021</td>
+</tr>
+</tbody>
+</table>
 <pre class="r"><code>tb_grouped = tb %&gt;% group_by(Entity) %&gt;% summarise(avg_growth = mean(Growth_Rate),
                                                    start_growth = first(Growth_Rate),
                                                    end_growth = last(Growth_Rate),
@@ -1559,9 +1590,10 @@ increased from 21.2 to 48.4.</p>
                                                    start_age = first(Median_Age),
                                                    end_age = last(Median_Age)
                                                    )
-knitr::kable(tb_grouped, format=&quot;simple&quot;, caption=&quot;Summary of Australia vs Japan Population Growth&quot;)</code></pre>
+knitr::kable(tb_grouped, format=&quot;simple&quot;, caption=&quot;Australia vs Japan Population Growth - Summary of Growth and Mean Age&quot;)</code></pre>
 <table>
-<caption>Summary of Australia vs Japan Population Growth</caption>
+<caption>Australia vs Japan Population Growth - Summary of Growth and
+Mean Age</caption>
 <thead>
 <tr class="header">
 <th align="left">Entity</th>
