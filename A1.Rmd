@@ -86,6 +86,7 @@ graph1
   
 * Japan's median age becam higher compared to Australia from the mid 1960's  
 * While population growth in both countries has generally been declining from 1950, major divergence occurs from the late 1970s where year on year decrease in Japan's population growth rate is seen, even after it first enters negative growth in 2005.  
+* CONFLICT Added
   
 ## Section 7: Conclusion
 Based on the data of population growth and median age between 1950 and 2021, while Australia has witnessed a steady decrease in population growth since the early 1960, the year on year decrease in growth over the past few decades has been relatively mild compared to Japan where population decline has become a major issue.  
