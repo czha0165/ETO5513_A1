@@ -86,12 +86,10 @@ graph1
   
 * Japan's median age becam higher compared to Australia from the mid 1960's  
 * While population growth in both countries has generally been declining from 1950, major divergence occurs from the late 1970s where year on year decrease in Japan's population growth rate is seen, even after it first enters negative growth in 2005.  
-* THIS IS A CONFLICT WITH MAIN
   
 ## Section 7: Conclusion
 Based on the data of population growth and median age between 1950 and 2021, while Australia has witnessed a steady decrease in population growth since the early 1960, the year on year decrease in growth over the past few decades has been relatively mild compared to Japan where population decline has become a major issue.  
-From 1950 when the measure was first available, Japan started with a much lower median age and a higher population growth rate. However after a period of relative stability (and even growth over some years) until the 1970s, year on year decrease in growth rate begun to accelerate, resulting in negative growth from the mid 2000s. Referring to the co-efficient value corresponding to the rate of decrease in growth rate, Japan's rate of growth rate decrease is more than doubled that of Australia over the period 1950 to 2021. This is a major contributing factor of population aging in Japan. Australia on the other hand have fared better with a significantly lower year on year decrease in growth rate and have yet to experience negative growth.  
-The data examined in this report highlight existing policy challenges for Japan and other similar nations currently experiencing negative population growth and significant aging of population. There's are currently no resolution in sight as a recovery in population growth is yet to be seen. While Australia is currently not in population decline, the rate of population decrease appears steady and it is a strong possibility in the future.
+From 1950 when the measure was first available, Japan started with a much lower median age and a higher population growth rate. However after a period of relative stability (and even growth over some years) until the 1970s, year on year decrease in growth rate begun to accelerate, resulting in negative growth from the mid 2000s. Australia on the other hand have fared better with a much lower year on year decrease in growth rate and have yet to experience negative growth.
 
 
 
