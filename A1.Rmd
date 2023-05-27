@@ -91,12 +91,7 @@ graph1
   
 * Japan's median age became higher compared to Australia from the mid 1960's  
 * While population growth in both countries has generally been declining from 1950, major divergence occurs from the late 1970s where year on year decrease in Japan's population growth rate is seen, even after it first enters negative growth in 2005.  
-<<<<<<< HEAD
 * The difference between the rate of population growth rate reduction between Australia and Japan can be seen in the difference between respective gradient coefficient in the linear regression of the growth rate line. For Australia, the gradient of the growth rate line is `r growth_rate_eq_A_coef`. For Japan, the gradient of the growth rate line is `r growth_rate_eq_J_coef`. The rate of growth rate reduction in Japan is more than doubled that of Australia.
->>>>>>> P2_fig_table
-=======
-* THIS IS A CONFLICT WITH MAIN
->>>>>>> parent of 119c0cb (Revert "Merge branch 'conclusion_update'")
   
 ## Section 7: Conclusion
 Based on the data of population growth and median age between 1950 and 2021, while Australia has witnessed a steady decrease in population growth since the early 1960, the year on year decrease in growth over the past few decades has been relatively mild compared to Japan where population decline has become a major issue.  
