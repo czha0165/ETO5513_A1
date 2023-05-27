@@ -43,6 +43,10 @@ country1 <- first(tb[1,'Entity'])
 country2 <- first(tb[nrow(tb),'Entity'])
 yearStart <- min(tb$Year)
 yearEnd <- max(tb$Year)
+growth_rate_eq_A = lm(subset(tb,Entity==country1)$Growth_Rate~subset(tb,Entity==country1)$Year)
+growth_rate_eq_A_coef <- summary(growth_rate_eq_A)$coefficients[2,1]
+growth_rate_eq_J = lm(subset(tb,Entity==country2)$Growth_Rate~subset(tb,Entity==country2)$Year)
+growth_rate_eq_J_coef <- summary(growth_rate_eq_J)$coefficients[2,1]
 ```
 
 After filtering the dataset for `r country1` and `r country2`, there are `r nrow(tb)` data points in total from the year `r yearStart` to `r yearEnd`. The column names are `r colnames(tb)` respectively, and their data types are `r sapply(tb, class)` respectively.  
@@ -54,7 +58,7 @@ Over this period:
 ```{r}
 tb_grouped = tb %>% group_by(Entity) %>% summarise(data_points = n(),
                                                    start_year = min(Year),
-                                                   end_year = max(Year)
+                                                   end_year = max(Year),
                                                    )
 knitr::kable(tb_grouped, format="simple", caption="Australia vs Japan Population Growth - Description of Data")
 ```
@@ -65,11 +69,12 @@ tb_grouped = tb %>% group_by(Entity) %>% summarise(avg_growth = mean(Growth_Rate
                                                    end_growth = last(Growth_Rate),
                                                    avg_age = mean(Median_Age),
                                                    start_age = first(Median_Age),
-                                                   end_age = last(Median_Age)
+                                                   end_age = last(Median_Age),
                                                    )
 knitr::kable(tb_grouped, format="simple", caption="Australia vs Japan Population Growth - Summary of Growth and Mean Age")
 ```
   
+The summary table shows that there are 72 data points collected for both Australian and Japan, which represents 1 data every year containing the growth rate and Mean Age for every year between the years 1950 and 2021.
 Based on the summary of population growth rates and population average age, Japan started with a lower average compared to Australia, however ended with a much __higher__ average age. This is explained by the population growth which for Japan started higher but ended in population decline, while Australia started with a lower growth rate, it still ended in positive territory.
 
 ## Section 6: Visualisations
@@ -84,8 +89,9 @@ graph1
 
 ```
   
-* Japan's median age becam higher compared to Australia from the mid 1960's  
+* Japan's median age became higher compared to Australia from the mid 1960's  
 * While population growth in both countries has generally been declining from 1950, major divergence occurs from the late 1970s where year on year decrease in Japan's population growth rate is seen, even after it first enters negative growth in 2005.  
+* The difference between the rate of population growth rate reduction between Australia and Japan can be seen in the difference between respective gradient coefficient in the linear regression of the growth rate line. For Australia, the gradient of the growth rate line is `r growth_rate_eq_A_coef`. For Japan, the gradient of the growth rate line is `r growth_rate_eq_J_coef`. The rate of growth rate reduction in Japan is more than doubled that of Australia.
   
 ## Section 7: Conclusion
 Based on the data of population growth and median age between 1950 and 2021, while Australia has witnessed a steady decrease in population growth since the early 1960, the year on year decrease in growth over the past few decades has been relatively mild compared to Japan where population decline has become a major issue.  
