@@ -54,6 +54,9 @@ Over this period:
 `r country1`: Sum of natural growth rate is `r sum(filter(tb, Entity==country1)[,4])` and the average age has `r if(sum(tb[tb$Entity == country1 & tb$Year == yearStart,5])>sum(tb[tb$Entity == country1 & tb$Year == yearEnd,5])){"decreased"}else{"increased"}` from `r sum(tb[tb$Entity == country1 & tb$Year == yearStart,5])` to `r sum(tb[tb$Entity == country1 & tb$Year == yearEnd,5])`.  
 `r country2`: Sum of natural growth rate is `r sum(filter(tb, Entity==country2)[,4])` and the average age has `r if(sum(tb[tb$Entity == country2 & tb$Year == yearStart,5])>sum(tb[tb$Entity == country2 & tb$Year == yearEnd,5])){"decreased"}else{"increased"}` from `r sum(tb[tb$Entity == country2 & tb$Year == yearStart,5])` to `r sum(tb[tb$Entity == country2 & tb$Year == yearEnd,5])`.  
 
+Screenshot:
+`r knitr::include_graphics("Image/screenshot.png")`
+
 ## Section 5: Data summary
 ```{r}
 tb_grouped = tb %>% group_by(Entity) %>% summarise(data_points = n(),
