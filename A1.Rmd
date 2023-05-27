@@ -1,10 +1,12 @@
 ---
 title: "ETO5513 Assignment 1"
+author: "Chenxi Zhang (33475776)"
 output: html_document
 date: "2023-05-20"
 ---
 
 ```{r setup, include=FALSE}
+# Section 1: Loading libraries
 knitr::opts_chunk$set(echo = TRUE)
 library(readr)
 options(readr.show_col_types = FALSE)
@@ -12,29 +14,76 @@ library(knitr)
 library(dplyr)
 #library(tidyverse)
 #library(visdat)
-#library(ggplot2)
+library(ggplot2)
 #library(gganimate)
-#library(plotly)
+library(plotly)
 #library(gapminder)
 ```
 
-## Research Question
-The data being examined in this assignment is to investigate the relationship between Australia's median age and birth rate trends. This is to determine whether the decrease in birth rates have contributed to Australia's aging population.
+## Section 2: Research Question
+The data being examined in this assignment is to investigate how Australia's median age and natural growth rate compares to a country that is well known as being in population decline such as Japan. 
 
-## Dataset Introduction
-The dataset "population-growth-rate-vs-median-age.csv" is sourced from https://ourworldindata.org/grapher/population-growth-rate-vs-median-age. The dataset contains 5 columns:
-Entity: The country
-Code: Country code relating to Entity
-Year: The year relating to the data point
-NATURAL GROWTH RATE - SEX: ALL - AGE: ALL - VARIANT: ESTIMATES: All - Age: All - Variant: Estimates: Crude birth rate minus the crude death rate. Represents the portion of population growth (or decline) determined exclusively by births and deaths.
-MEDIAN AGE - SEX: ALL - AGE: ALL - VARIANT: ESTIMATES: Age that divides the population in two parts of equal size, that is, there are as many persons with ages above the median as there are with ages below the median.
-Continent: The continent relating to the data point.
-
+## Section 3: Dataset Introduction
+The dataset "population-growth-rate-vs-median-age.csv" is sourced from https://ourworldindata.org/grapher/population-growth-rate-vs-median-age. It contains variables relating to the growth rate and median age of countries accross a number of years.
 ```{r, include=FALSE}
-tb <- read_csv("population-growth-rate-vs-median-age.csv")
-tb <- filter(tb, Entity=="Australia")
+tb <- read_csv("Data/population-growth-rate-vs-median-age.csv")
+tb <- filter(tb, Entity=="Australia" | Entity=="Japan")
+colnames(tb)[4]="Growth_Rate"
+colnames(tb)[5]="Median_Age"
 ```
 
 ```{r}
 kable(tb)
 ```
+
+## Section 4: Data set description
+
+```{r, include=FALSE}
+country1 <- first(tb[1,'Entity'])
+country2 <- first(tb[nrow(tb),'Entity'])
+yearStart <- min(tb$Year)
+yearEnd <- max(tb$Year)
+```
+
+After filtering the dataset for `r country1` and `r country2`, there are `r nrow(tb)` data points in total from the year `r yearStart` to `r yearEnd`. The column names are `r colnames(tb)` respectively, and their data types are `r sapply(tb, class)` respectively.  
+Over this period:  
+`r country1`: Sum of natural growth rate is `r sum(filter(tb, Entity==country1)[,4])` and the average age has `r if(sum(tb[tb$Entity == country1 & tb$Year == yearStart,5])>sum(tb[tb$Entity == country1 & tb$Year == yearEnd,5])){"decreased"}else{"increased"}` from `r sum(tb[tb$Entity == country1 & tb$Year == yearStart,5])` to `r sum(tb[tb$Entity == country1 & tb$Year == yearEnd,5])`.  
+`r country2`: Sum of natural growth rate is `r sum(filter(tb, Entity==country2)[,4])` and the average age has `r if(sum(tb[tb$Entity == country2 & tb$Year == yearStart,5])>sum(tb[tb$Entity == country2 & tb$Year == yearEnd,5])){"decreased"}else{"increased"}` from `r sum(tb[tb$Entity == country2 & tb$Year == yearStart,5])` to `r sum(tb[tb$Entity == country2 & tb$Year == yearEnd,5])`.  
+
+## Section 5: Data summary
+```{r}
+tb_grouped = tb %>% group_by(Entity) %>% summarise(avg_growth = mean(Growth_Rate),
+                                                   start_growth = first(Growth_Rate),
+                                                   end_growth = last(Growth_Rate),
+                                                   avg_age = mean(Median_Age),
+                                                   start_age = first(Median_Age),
+                                                   end_age = last(Median_Age)
+                                                   )
+knitr::kable(tb_grouped, format="simple", caption="Summary of Australia vs Japan Population Growth")
+```
+  
+Based on the summary of population growth rates and population average age, Japan started with a lower average compared to Australia, however ended with a much __higher__ average age. This is explained by the population growth which for Japan started higher but ended in population decline, while Australia started with a lower growth rate, it still ended in positive territory.
+
+## Section 6: Visualisations
+```{r}
+graph1 = ggplot(tb)+
+  geom_bar(aes(x=Year, y=Median_Age, fill=Entity), stat="identity",position = position_dodge(),alpha = 0.5)+
+  #geom_line(aes(x=Year, y=20*Growth_Rate, color=Entity), stat="identity", size=2)+
+  geom_point(aes(x=Year, y=20*Growth_Rate, color=Entity), stat="identity")+
+  labs(title="Australia vs Japan Population Growth and Median Age", x="Year", y="Median Age (Bar)")+
+  scale_y_continuous(sec.axis=sec_axis(~./20,name="Growth Rate (Line)"))
+graph1
+
+```
+  
+* Japan's median age becam higher compared to Australia from the mid 1960's  
+* While population growth in both countries has generally been declining from 1950, major divergence occurs from the late 1970s where year on year decrease in Japan's population growth rate is seen, even after it first enters negative growth in 2005.  
+  
+## Section 7: Conclusion
+Based on the data of population growth and median age between 1950 and 2021, while Australia has witnessed a steady decrease in population growth since the early 1960, the year on year decrease in growth over the past few decades has been relatively mild compared to Japan where population decline has become a major issue.  
+From 1950 when the measure was first available, Japan started with a much lower median age and a higher population growth rate. However after a period of relative stability (and even growth over some years) until the 1970s, year on year decrease in growth rate begun to accelerate, resulting in negative growth from the mid 2000s. Australia on the other hand have fared better with a much lower year on year decrease in growth rate and have yet to experience negative growth.
+
+
+
+
+

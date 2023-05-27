@@ -9,6 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Chenxi Zhang (33475776)" />
 
 <meta name="date" content="2023-05-20" />
 
@@ -350,41 +351,33 @@ display: none;
 
 
 <h1 class="title toc-ignore">ETO5513 Assignment 1</h1>
+<h4 class="author">Chenxi Zhang (33475776)</h4>
 <h4 class="date">2023-05-20</h4>
 
 </div>
 
 
-<div id="research-question" class="section level2">
-<h2>Research Question</h2>
-<p>The data being examined in this assignment is to investigate the
-relationship between Australia’s median age and birth rate trends. This
-is to determine whether the decrease in birth rates have contributed to
-Australia’s aging population.</p>
+<div id="section-2-research-question" class="section level2">
+<h2>Section 2: Research Question</h2>
+<p>The data being examined in this assignment is to investigate how
+Australia’s median age and natural growth rate compares to a country
+that is well known as being in population decline such as Japan.</p>
 </div>
-<div id="dataset-introduction" class="section level2">
-<h2>Dataset Introduction</h2>
+<div id="section-3-dataset-introduction" class="section level2">
+<h2>Section 3: Dataset Introduction</h2>
 <p>The dataset “population-growth-rate-vs-median-age.csv” is sourced
-from <a href="https://ourworldindata.org/world-population-growth" class="uri">https://ourworldindata.org/world-population-growth</a></p>
+from <a href="https://ourworldindata.org/grapher/population-growth-rate-vs-median-age" class="uri">https://ourworldindata.org/grapher/population-growth-rate-vs-median-age</a>.
+It contains variables relating to the growth rate and median age of
+countries accross a number of years.</p>
 <pre class="r"><code>kable(tb)</code></pre>
-<table style="width:100%;">
-<colgroup>
-<col width="6%" />
-<col width="3%" />
-<col width="3%" />
-<col width="42%" />
-<col width="36%" />
-<col width="6%" />
-</colgroup>
+<table>
 <thead>
 <tr class="header">
 <th align="left">Entity</th>
 <th align="left">Code</th>
 <th align="right">Year</th>
-<th align="right">Natural growth rate - Sex: all - Age: all - Variant:
-estimates</th>
-<th align="right">Median age - Sex: all - Age: all - Variant:
-estimates</th>
+<th align="right">Growth_Rate</th>
+<th align="right">Median_Age</th>
 <th align="left">Continent</th>
 </tr>
 </thead>
@@ -965,8 +958,683 @@ estimates</th>
 <td align="right">37.0</td>
 <td align="left">NA</td>
 </tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1950</td>
+<td align="right">1.73</td>
+<td align="right">21.2</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1951</td>
+<td align="right">1.53</td>
+<td align="right">21.4</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1952</td>
+<td align="right">1.43</td>
+<td align="right">21.7</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1953</td>
+<td align="right">1.25</td>
+<td align="right">22.0</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1954</td>
+<td align="right">1.19</td>
+<td align="right">22.4</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1955</td>
+<td align="right">1.17</td>
+<td align="right">22.8</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1956</td>
+<td align="right">1.05</td>
+<td align="right">23.2</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1957</td>
+<td align="right">0.91</td>
+<td align="right">23.6</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1958</td>
+<td align="right">1.06</td>
+<td align="right">24.0</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1959</td>
+<td align="right">1.02</td>
+<td align="right">24.4</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1960</td>
+<td align="right">0.98</td>
+<td align="right">24.8</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1961</td>
+<td align="right">0.98</td>
+<td align="right">25.2</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1962</td>
+<td align="right">0.98</td>
+<td align="right">25.6</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1963</td>
+<td align="right">1.06</td>
+<td align="right">26.0</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1964</td>
+<td align="right">1.10</td>
+<td align="right">26.3</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1965</td>
+<td align="right">1.14</td>
+<td align="right">26.6</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1966</td>
+<td align="right">0.74</td>
+<td align="right">27.0</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1967</td>
+<td align="right">1.22</td>
+<td align="right">27.3</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1968</td>
+<td align="right">1.15</td>
+<td align="right">27.6</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1969</td>
+<td align="right">1.13</td>
+<td align="right">27.9</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1970</td>
+<td align="right">1.15</td>
+<td align="right">28.2</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1971</td>
+<td align="right">1.22</td>
+<td align="right">28.5</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1972</td>
+<td align="right">1.26</td>
+<td align="right">28.8</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1973</td>
+<td align="right">1.28</td>
+<td align="right">29.1</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1974</td>
+<td align="right">1.20</td>
+<td align="right">29.5</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1975</td>
+<td align="right">1.09</td>
+<td align="right">29.8</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1976</td>
+<td align="right">1.00</td>
+<td align="right">30.0</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1977</td>
+<td align="right">0.93</td>
+<td align="right">30.3</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1978</td>
+<td align="right">0.86</td>
+<td align="right">30.7</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1979</td>
+<td align="right">0.80</td>
+<td align="right">31.1</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1980</td>
+<td align="right">0.71</td>
+<td align="right">31.6</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1981</td>
+<td align="right">0.64</td>
+<td align="right">32.2</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1982</td>
+<td align="right">0.62</td>
+<td align="right">32.8</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1983</td>
+<td align="right">0.59</td>
+<td align="right">33.3</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1984</td>
+<td align="right">0.57</td>
+<td align="right">33.9</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1985</td>
+<td align="right">0.52</td>
+<td align="right">34.5</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1986</td>
+<td align="right">0.47</td>
+<td align="right">35.0</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1987</td>
+<td align="right">0.46</td>
+<td align="right">35.5</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1988</td>
+<td align="right">0.40</td>
+<td align="right">36.0</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1989</td>
+<td align="right">0.35</td>
+<td align="right">36.4</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1990</td>
+<td align="right">0.29</td>
+<td align="right">36.9</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1991</td>
+<td align="right">0.29</td>
+<td align="right">37.4</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1992</td>
+<td align="right">0.26</td>
+<td align="right">37.8</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1993</td>
+<td align="right">0.22</td>
+<td align="right">38.2</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1994</td>
+<td align="right">0.26</td>
+<td align="right">38.6</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1995</td>
+<td align="right">0.18</td>
+<td align="right">39.0</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1996</td>
+<td align="right">0.22</td>
+<td align="right">39.3</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1997</td>
+<td align="right">0.19</td>
+<td align="right">39.7</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1998</td>
+<td align="right">0.17</td>
+<td align="right">40.0</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">1999</td>
+<td align="right">0.12</td>
+<td align="right">40.4</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2000</td>
+<td align="right">0.15</td>
+<td align="right">40.7</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2001</td>
+<td align="right">0.12</td>
+<td align="right">41.1</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2002</td>
+<td align="right">0.10</td>
+<td align="right">41.4</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2003</td>
+<td align="right">0.04</td>
+<td align="right">41.8</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2004</td>
+<td align="right">0.02</td>
+<td align="right">42.1</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2005</td>
+<td align="right">-0.05</td>
+<td align="right">42.4</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2006</td>
+<td align="right">-0.03</td>
+<td align="right">42.8</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2007</td>
+<td align="right">-0.06</td>
+<td align="right">43.1</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2008</td>
+<td align="right">-0.08</td>
+<td align="right">43.5</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2009</td>
+<td align="right">-0.10</td>
+<td align="right">43.9</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2010</td>
+<td align="right">-0.16</td>
+<td align="right">44.2</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2011</td>
+<td align="right">-0.22</td>
+<td align="right">44.5</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2012</td>
+<td align="right">-0.23</td>
+<td align="right">44.8</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2013</td>
+<td align="right">-0.25</td>
+<td align="right">45.1</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2014</td>
+<td align="right">-0.28</td>
+<td align="right">45.5</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2015</td>
+<td align="right">-0.30</td>
+<td align="right">45.9</td>
+<td align="left">Asia</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2016</td>
+<td align="right">-0.34</td>
+<td align="right">46.3</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2017</td>
+<td align="right">-0.43</td>
+<td align="right">46.7</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2018</td>
+<td align="right">-0.48</td>
+<td align="right">47.1</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2019</td>
+<td align="right">-0.54</td>
+<td align="right">47.6</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2020</td>
+<td align="right">-0.55</td>
+<td align="right">48.0</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="left">JPN</td>
+<td align="right">2021</td>
+<td align="right">-0.61</td>
+<td align="right">48.4</td>
+<td align="left">NA</td>
+</tr>
 </tbody>
 </table>
+</div>
+<div id="section-4-data-set-description" class="section level2">
+<h2>Section 4: Data set description</h2>
+<p>After filtering the dataset for Australia and Japan, there are 144
+data points in total from the year 1950 to 2021. The column names are
+Entity, Code, Year, Growth_Rate, Median_Age, Continent respectively, and
+their data types are character, character, numeric, numeric, numeric,
+character respectively.<br />
+Over this period:<br />
+Australia: Sum of natural growth rate is 64.75 and the average age has
+increased from 29.4 to 37.<br />
+Japan: Sum of natural growth rate is 36.86 and the average age has
+increased from 21.2 to 48.4.</p>
+</div>
+<div id="section-5-data-summary" class="section level2">
+<h2>Section 5: Data summary</h2>
+<pre class="r"><code>tb_grouped = tb %&gt;% group_by(Entity) %&gt;% summarise(avg_growth = mean(Growth_Rate),
+                                                   start_growth = first(Growth_Rate),
+                                                   end_growth = last(Growth_Rate),
+                                                   avg_age = mean(Median_Age),
+                                                   start_age = first(Median_Age),
+                                                   end_age = last(Median_Age)
+                                                   )
+knitr::kable(tb_grouped, format=&quot;simple&quot;, caption=&quot;Summary of Australia vs Japan Population Growth&quot;)</code></pre>
+<table>
+<caption>Summary of Australia vs Japan Population Growth</caption>
+<thead>
+<tr class="header">
+<th align="left">Entity</th>
+<th align="right">avg_growth</th>
+<th align="right">start_growth</th>
+<th align="right">end_growth</th>
+<th align="right">avg_age</th>
+<th align="right">start_age</th>
+<th align="right">end_age</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Australia</td>
+<td align="right">0.8993056</td>
+<td align="right">1.37</td>
+<td align="right">0.51</td>
+<td align="right">31.24306</td>
+<td align="right">29.4</td>
+<td align="right">37.0</td>
+</tr>
+<tr class="even">
+<td align="left">Japan</td>
+<td align="right">0.5119444</td>
+<td align="right">1.73</td>
+<td align="right">-0.61</td>
+<td align="right">34.61667</td>
+<td align="right">21.2</td>
+<td align="right">48.4</td>
+</tr>
+</tbody>
+</table>
+<p>Based on the summary of population growth rates and population
+average age, Japan started with a lower average compared to Australia,
+however ended with a much <strong>higher</strong> average age. This is
+explained by the population growth which for Japan started higher but
+ended in population decline, while Australia started with a lower growth
+rate, it still ended in positive territory.</p>
+</div>
+<div id="section-6-visualisations" class="section level2">
+<h2>Section 6: Visualisations</h2>
+<pre class="r"><code>graph1 = ggplot(tb)+
+  geom_bar(aes(x=Year, y=Median_Age, fill=Entity), stat=&quot;identity&quot;,position = position_dodge(),alpha = 0.5)+
+  #geom_line(aes(x=Year, y=20*Growth_Rate, color=Entity), stat=&quot;identity&quot;, size=2)+
+  geom_point(aes(x=Year, y=20*Growth_Rate, color=Entity), stat=&quot;identity&quot;)+
+  labs(title=&quot;Australia vs Japan Population Growth and Median Age&quot;, x=&quot;Year&quot;, y=&quot;Median Age (Bar)&quot;)+
+  scale_y_continuous(sec.axis=sec_axis(~./20,name=&quot;Growth Rate (Line)&quot;))
+graph1</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUAAAAPACAMAAADDuCPrAAABklBMVEUAAAAAADoAAGYAOjoAOmYAOpAAZpAAZrYAv8QzMzM6AAA6AGY6OgA6Ojo6OmY6OpA6ZmY6ZpA6ZrY6kJA6kLY6kNtNTU1NTW5NTY5Nbm5Nbo5NbqtNjshmAABmADpmOgBmOjpmOmZmOpBmZgBmZjpmZmZmZpBmZrZmkGZmkJBmkLZmkNtmtrZmtttmtv9uTU1ubk1ubo5ujqtujshuq+R11dd52Nt/3+GOTU2Obk2Obm6Oq6uOq8iOyOSOyP+QOgCQOjqQOmaQZgCQZjqQZmaQkGaQkLaQtpCQtraQttuQ29uQ2/+rbk2rjm6ryOSr5P+2ZgC2Zjq2Zma2kDq2kGa2kJC2kLa2tma2tpC2tra2ttu229u22/+2/9u2///Ijk3Ijm7Iq27I5P/I///bkDrbkGbbtmbbtpDbtrbbttvb27bb29vb2//b/7bb///kq27kyI7kyKvk5Mjk///r6+vysKzy8vL1tK/4dm37urb/tmb/yI7/25D/27b/29v/5Kv/5Mj//7b//8j//9v//+T////C3vKqAAAACXBIWXMAAB2HAAAdhwGP5fFlAAAgAElEQVR4nO29j5scxZmgWY3EielBGuBM47PNSLuDvAOzoFuvdTCzN9bcYuaGM143B3NnGdby4bbkAa8Yn0N7diMJRNP/91X+jozMyIqMjKgvM/J9n8emqivj+yKjIl9FZkRmbc4BAMCLjXQFAACWCgIFAPAEgQIAeIJAAQA8QaAAAJ4gUAAATxAoAIAnCBQAwBMECgDgCQIFAPAEgQIAeIJAAQA8QaAAAJ4gUAAATxAoAIAnexDo8Wbz1C8jxX7y8ubgJ/V/4iSIVvnz043G5ec/mhbNoRGmtdOjdy4fbit64bl373vH6LDtHS9GDJY3cfsbPM7+9IZrrGlNFrPvwxyIL9BtD/Q6Ru5dc+i3CQl0y8WPp0QbaoSyMae0072rTUUPvjVZodXXuw+BtnSZ98c9CdS378NiiC/QvAs/PfaAO7vl1G/TEui0VPZGqBvTv53O3jdcP61Rmq93LwK91PnLfgTq1/dhQUQXaHaoPOvSYds49tt45mwSRBVoc3R9etU40sdib4vprbT9Frdcefd329ePP3x2shaaGsUX6IXD1ld47NgfA1TMs+/Dgogu0IeHm6fvjjfD+gSaS2rKzsQU6HH7AsPJ1DPTfQr06f+s7/028/9wa08C9ez7sCCiC3R7rL3ocQCvUKDZ8TZltBJRoFnNWkPOk2CXG/Yg0Lv6X7d/eH1fAvXs+7AgYgu0uNg1vjOuUaDZlMOEYzaiQDuTyVlVp5yZ7lWg/+1lrZmPN0/91z0J1Lfvw4KILdDCEaf6Aaj1qJP6/ObR29mFtQvlUp5sxJPP9v4k3+aNs/cPNwdX8iPu3tv5UprXfpdv2J1Ean9ec6KfSVU1aCftRRdoO/RZfhg+upZdG9QCGPmP842yv114rXPV0BBoFrFsmU+vbUscPP9x84GZqtuKtkbQGlPbpJ1huJ5ZBEMCJ2Vw49tpRT2uPaWNrbPK6l9vvh+2xI7teXZv2zQHL9y3CPT+cfPvx7YpL51pAs1DNc3QjWXvWoNNVudu9/1t/LuXO3XtVAIWQ2yBFt1E77J9AtXmePMrbaZAj6s3j+q1NAd5PFOg5uc1ugjLrc2kvTTlzND5PlXz6M+XR1Anf3aUVXk6o0DbCLSYssl44b4t1YBAjUr0CdTMMFzPgRP21rdjRG3+0TptrplmiUyB3j20fQ1O7VltdPATi0BPmz9vU7/R9MamC7xw3xLL3rUGm6z5ilp9v6+u3UrAcogs0Kr7nWiq6BHo8aYhO1QNgV7O32wDFGv4tD5rCLTzeUMzHKq8ZSa17UDxWSd0dmC8elj9qdi7bv7jqvbNRg2GQDPNvGFEyT/vS2UXqFmJHoF2MgzX89g+6W77drLtH9bT38d6Cz31S0Og9sRO7fmwbpmn/qpfoE+ac/iTbfpaaY3wK9V3Y9m71mDNz/v7fhOlrmu3ErAgIgu06jzbjlkLrXvoZ932hXyFzAeb8sPmzCmb8d186/7549/lRQ9e38Y7+/Cw1b2rrTufN5w23bNwaU/SHmqBdkIXHf/iR+UCpBd7NyosnZ2c5UMP48pbdxY+z3VcFqnjWlJZBNqtRN2Y2ibtDIP11C4tdDC+nVbUerFnXv+iGU/Nyw2DDeTSnnnw7IssVvr3CbRZdZqdwTdjwpOy5OP39YZux7K36mDNz619Px9nFmPuF3srAUsirkBb/9ZXnaN76GsXKKuXbYGW22tTF6V72gLtft7QBCyd2JO0h0qg3dD5wXapOMUuJ1l68h/Xte+ZItIr+Tg7MPMNmiuOVdyeVHaB9lTCFGg3w2A9hya3tG+nG/Wk/MP2k8tlpTpXFncl3tmeWdrXi7S3LAKtK5Kfwde9sh2+OvMxYtlbdfCr7e/7TfxHLzfxjUrAkogr0OYkTuscvQI172xpCbT6B1wTTnlW1hZo93ON+iCyJ+2hEmg3dD1gPK+Pgp78x639NjTduROpKqJFyeL2pLILtKcSpkC7GQbr2ZpyP25XVvt2ulGzdZDFRgf/+2E1xNMvvexI7NSeWqmeya4iRFWR/Ay+Vpv+72ZxVtITy96qg19tf9/XMlaXhbuVgCURV6BNx9IOwu6hn4vkuX/SJ85bAu2/wFSO+fpv5ewuP6oOourw6UnaQ88ypvJPrRPbzuxFVe54aJxrCvQFvX5V3Ev9qQZn4Y1KGALtyTBYz9YAqyvQ8tvpr3fZCNVSoupLaAnU4UTA3p62+cmSQnyVt/Mz+LqI7qt8nqkvlr1Vd9S8p+/r8atG7VQCFkVUgeoX3jf1kdY99Ovr6Ff+Ubva3gjU6Jxnn/38x4cbu0C1z/VS5UGki9RI2r8LrUUoTejW0daqpJ6/d81WhS7QgyvtlVn1FsXx30m1S6B6JQyB9mQYrOcOgTaa6EQ9yeu9/eRStv5SO6nvXQdqE+hge7bSnlgEWn2Qn8FXzanP3mRc6o1lb9Xhmvf1/VasZo6+XQlYFFEFaoyw7IeM1o0uvpt/YhPop/nSzZxegRqfG7Upz5nKK3WdpD1oAjVCtx53Uk9Rmfl3CbQ7uO4XaCfVkEDNSkwUaNZQ5oF96iTQoq6nma9yl/Y81WSHQHe2Z+tfuO4Q7nSjj3xP9H/6THfls/WdWPZWHa55X99vxe8XKE8eWRgxBWp2jrKTWRbS11t1Z+HrztmsxesXaOdzneLalS4jM2kPdZ/vhG5ZraxkN394ge4cgXYrMVGgfetA3QRaNHmurYfZRdD6WqSjQB3a002gRQtu/7+6ej1aoCO/2t6+j0DTI6ZA9fUb2lFo63iP//lavrjDmGXQtilPiy4/9+ov/lvfNdDu5y3yG1JO2329lbTi7MPLh2/UKetZ+HbonvPqnvwTBdpznW+XQHsqMSRQaziNnpv0dwi0WeB78JNCW7lLa8G5CdSlPd1O4YsB8MN6Jks7k2/ns53Cj/1qe/u+5RSeiaMFE1Og7emfh9r6OW1Fk3G2WK3J7BXoSbkW79wyidT9vEV++PbMdJ6ZC0HbC0/yON3QPTM7PfnHC3T8JNJxS6A9lXCbRBoeThmt2RVoX9S8yUttZRdB68Z3E6hLezpNIuXf46VsNUB1C8QbfVsPTCKN/Wp7+74ev/pOu1WGJRFRoE/aq+OyHlMt/9COOcsx0CtQrbOd9p3Cdz9vkQ2F6pHp4IHXVFFb9GeErvfnvB5v9OQfL1D92NOWMRmpuq040AjmMqZuBocLeu2a/qYj0L6o+fzRab1o6N/X/6q5CdSpPY20FoFmCwL+6632OgxdcifVv4BmLHurOs+7NV9g/zImoxKwJCIK9NQ4Ma7eN1fUTjadY6D6h7lPoMaK5I5Aez5vsx2BvFNv0pNU29BYZdMTWlu2XR4fffk9BGpZSN9K1deK9kYwBdq/kH5oLiebe9fuVM8vHpsC7Ymajzv/qnhdrKbvnO8PJHZrz3Zam0CzrV99ufi0Eqi2bLT8Z6knlr1Vh5rM0vebhfRPqoX03UrAkogoUPP8POsz1arPi/9HNYVTHQMX818qy+4CzHtn02PbI9D8PCq/661/BGp83ia/07nqoz1JWxsevFtW8Y3+1MXl//rWxTd6N/IRaG6rnls5W6l6WtHeCHVjVt7qZNgl0Nwnm4v5qtnHP8/nUw7+xty4G7WcjL5Uff31oL/5eneMQB3as5XWKlDtu69PPvJ/Fj4qb8+0xLK36o6a9/b9LH622le77bRbCVgQ8QT65GXzaqM+nip49bDoMif6RGQ9SiiON2OM09CePar+gW9/bnC8aZ8wGUnbG5ZcsqTOani5Xb4nv49A9SWE9TmnkaqnFe2NUDdmJdBOht3LMVuttanHo/rG3ahlbWpV1v9ONV/vUGK39mxa4uAVu0DzrZqXb7RLbrQLO+1Y9lYdqLm177dXh77YXwlYEPEE2l37Ul32eVKuCDl442Ep0PPf1P3z4PVm4+q61CUtZrnVv79VrdHWlzF1Pjeonnd0bkla0zxirHpQXSd0fhiWmxWjsb78PgKtG6j1ODsjVbcVBxqhaszmXN7I4LCePX8caUW9cLa1cSdqUfXmWkyzbf317pqKcWjPSkEHb9hn4YtYzb89RS84q9exXdQevdqKZW/VgZrb+369Gur5/1xXp1MJWA7RBNqz+rq+flc8VHZ7qlQL9Pzxh/kQ60rzk+N3s2XL3zI6Z/Ho2Wyr1iKWWgzm5wbG3Hw3acOnxUNum0clm6GLwzA7F9Oe3tzJ7yXQ7Ed/s+f0th+obKTqtOJQI5SNqa2jaWdwuSHo/Oyfr2Vh6numejY2op7rLmkvhqq+3uHEju35aSb3Kx8PLGPSrzDq84f517ztAU0JI5a9Ve0139n3s4THQ5WApRD/Z41TZY8r+FgsmB58p2mAQH1BoDAWbdDavscelgoC9QWBwli0a6Mn1ss3sCQQqC8IFMaSrz3LLqt/+vamc7kWlggC9QWBwmi05XEMQJMAgfqCQGE0zZIlfoIzDRCoLwgUPHiUP1X0wqss+UwDBAoA4AkCBQDwBIECAHiCQAEAPEGgAACeIFAAAE8QKACAJwgUAMATBAoA4AkCBQDwBIECAHiCQAEAPEGgAACeIFAAAE/iCVSNZXyJUHhUNlxuuczs9Z5Ty2WeljqaIxIAgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mADgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mADgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mADgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mADgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mADgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mADgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mADgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mCDJ9IDAHjCCFQxFhPILZeZEahHcbCBQBUqEcgtlxmBehQHGwhUoRKB3HKZEahHcbCBQBUqEcgtlxmBehQHGwhUoRKB3HKZEahHcbCBQBUqEcgtlxmBehQHGwhUoRKB3HKZEahHcbCBQBUqEcgtlxmBehQHGwhUoRKB3HKZEahHcbCBQBUqEcgtlxmBehQHGwhUoRKB3HKZEahHcbCBQBUqEcgtlxmBehQHGwhUoRKB3HKZEahHcbCBQBUqEcgtlxmBehQHGwhUoRKB3HKZEahHcbCBQBUqEcgtlxmBehQHGwhUoRKB3HKZEahHcbCBQBUqEcgtlxmBehQHGwhUoRKB3HKZEahHcbCBQBUqEcgtlxmB3swYVxxsIFCFSgRyy2VGoAg0IAhUoRKB3HKZESgCDQgCVahEILdcZgSKQAOCQBUqEcgtl3mVAn1TlyYCDQgCVahEILdcZgSKQAOCQBUqEcgtlxmBItCAIFCFSgRyy2VGoAg0IAhUoRKB3HKZESgCDQgCVahEILdc5tUI9GYjSgQaDQSqUIlAbrnMCBSBBgSBKlQikFsuMwJFoAFBoAqVCOSWy4xAEWhAEKhCJQK55TIjUAQaEASqUIlAbrnMCBSBBgSBKlQikFsuc9IC7XgSgUYGgSpUIpBbLjMCRaABQaAKlQjklsuMQBFoQBCoQiUCueUyI1AEGhAEqlCJQG65zAgUgQYEgSpUIpBbLnNqAr1pcyMC3QcIVKESgdxymREoAg0IAlWoRCC3XGYEikADgkAVKhHILZcZgSLQgCBQhUoEcstlRqAINCAIVKESgdxymVMQqC5NBCoKAlWoRCC3XGYEikADgkAVKhHILZcZgSLQgCBQhUoEcstlRqAINCAIVKESgdxymREoAg0IAlWoRCC3XOalCtTiRgQqCwJVqEQgt1xmBIpAA4JAFSoRyC2XGYEi0IAgUIVKBHLLZUagCDQgCFShEoHccpkRKAINCAJVqEQgt1zmJQnUwY0IVBYEqlCJQG65zAgUgQYEgSpUIpBbLjMCRaABQaAKlQjklsuMQBFoQBCoQiUCueUyI1AEGhAEqlCJQG65zDMX6LAPezZCoKIgUIVKBHLLZUagCDQgCFShEoHccpkRKAINCAJVqEQgt1zmGQrU3YejCyDQyCBQhUoEcstlRqAINCAIVKESgdxymREoAg0IAlWoRCC3XGYEikADgkAVKhHILZd5JgL18+HoAgg0MghUoRKB3HKZESgCDQgCVahEILdcZgSKQAOCQBUqEcgtlxmBItCAIFCFSgRyy2WWS221GAJdLghUoRKB3HKZESgCDQgCVahEILdcZgSKQAOCQBUqEcgtl3m/qXW9IdAEQaAKlQjklsuMQBFoQBCoQiUCueUyI1AEGhAEqlCJQG65zAgUgQYEgSpUIpBbLjMCRaABQaAKlQjklsscP7VNdQg0QRCoQiUCueUyI1AEGhAEqlCJQG65zAgUgQYEgSpUIpBbLjMCRaABQaAKlQjklsuMQBFoQBCoQiUCueUyx0ntojoEmiAIVKESgdxymREoAg0IAlWoRCC3XGYEikADgkAVKhHILZcZgSLQgCBQhUoEcstlDpZ6tOoQaIIgUIVKBHLLZUagCDQgCFShEoHccpkRKAINCAJVqEQgt1xmBIpAA4JAFSoRyC2XGYEi0IAgUIVKBHLLZZ6UepLqEGiCIFCFSgRyy2VGoAg0IAhUoRKB3HKZESgCDQgCVahEILdc5tGpg6kOgSYIAlWoRCC3XGYEikADgkAVKhHILZcZgSLQgCBQhUoEcstlRqAINCAIVKESgdxymV1Su0gJgcI5Ai0yo5J955bLjEARaEAQqEIlArnlMiNQBBoQBKpQiUBuucwIFIEGBIEqVCKQWy4zAkWgAUGgCpUI5JbLbEs9VkoIFM4RaJEZlew7t1xmBIpAA4JAFSoRyC2XGYEi0IAgUIVKBHLLZUagCDQgCFShEoHccpn11FOkhEDhHIEWmVHJvnPLZUagCDQgCFShEoHccpkRKAINCAJVqEQgt1xmBIpAA4JAFSoRyC2X+c1AUkKgcI5Ai8zrVMk69xqBItCAeAv0yxvf/UP+4puf3jg6+sEnnQ3GfEPF1zS6RChWqpJ17jUCnSzQ3//d0dFLPYf8GvEV6DfvHRUC/fqto4xv/9rcYsw3VHxNo0uEYqUqWedeI9CpAv1VfsQfvfQzT3ckha9APz8qBXrn6LufnH9V6VRjzDdUfE2jS4RipSpZzV7rjkGgUwX6xdFLf3+eHfLdQdMK8RTolzdKgX55I2/Gr9/q/Hs05hsqvqbRJUKxHpW0Mq9mrxFoQIFuzz1/dJ4f8sV/V46fQLeN+J+Ka6CfH30v/8vnRz80thnzDRVf0+gSoViPSlqZV7PXCDSgQL9+qxx53ukc8mvET6B3jr5XTiLdKf8Z+qIUacOYb6j4mkaXCMV6VNLKvJq9RqAxZuERaIaXQL/Ynr4XAv3mvfLUvZ6UP/+zkmBVBJjGmzn6G9vrN10KOG20kKhO9B7SPVft1oiPQPOmQ6AwZ5JT3dwE+nnnnHOV+Ag0H7t3BGrOyY05RyhOFEaXCMV6TmZbmZPea9tZLqfwYU7hv2AZU46HQD/P59+tI9CKMd9Q8TWNLhGKtFVizZz0XiPQqAL94sZLzMFnjBfolzdyZyLQQLnlMie91wg0pkA/Z/xZMl6gnx/VbM/amYWfmlsuc3J77eIYBBpAoL/CnxVTBVqt/2QdqG9uuczJ7TUC3YtAv7lz9B1uQiqZ+jAR7kSamlsuc3J7jUD3ItA73fu218tUgX7z3tF3uBd+Sm65zMntNQLdh0A/x58akx9n9xVPY5qWWy5zCns9WnUIdKJAy8evZbAQNMTzQL/66bYpf9D9N2nMN1R8TaNLhCIJlYzPnMJeI9B9C/SLIwSqwRPpVSIqGZ85hb1GoPsWKLRAoCoRlYzPnMJeI1AEKgoCVYmoZHzmpe71JNUhUAQaEgSqFqySaZmXutcIFIHOBgSqFqySaZmXutcIFIHOBgSqFqySaZmXutcIFIHOBgSqFqySaZmXutcIFIHOBgSqFqySaZmXtNfBVIdAEWhIEKhamErCZV7SXiNQBDpLEKhamErCZV7SXiNQBDpLEKhamErCZV7SXiNQBDpLEKhamErCZV7SXiNQBDpLEKhamErCZZ77XofSBwJFoNFAoGoBKomTee57jUAR6OxBoGoBKomTee57jUAR6OxBoGoBKomTee57jUAR6OxBoGoBKomTee57jUAR6OxBoGoBKomTeYZ7HUUfCBSBRgOBqnmqZA+ZZ7jXCBSBLgsEquapkj1knuFeI1AEuiwQqJqnSvaQeYZ7jUAR6LJAoGqeKtlD5hnuNQJFoMsCgap5qmQPmWey19H1gUARaDQQqJqPSvaceSZ7jUAR6HJBoGo+Ktlz5pnsNQJFoMsFgar5qGTPmWey1wgUgS4XBKrmo5I9Z57JXiPQvQn0QQ4CDQgCVfNRyZ4zz2SvESgCXS4IVM1HJXvOLLjXHYshUAS6SBCoQqD7B4Ei0DRAoAqB7h8EujeBZsr8EwKNBQJVCHT/IFAEmgYIVCHQ/YNAEWgaIFCFQPcPAkWgaYBAFQLdC60DHYHGFKjmSQQaGQSqEOheQKBjBKqrrqs9faPhAgg0MghUIdC9gEB7LNZR3Q4fqu5GCFQUBKoQ6F5YtUBzcSHQBEGgCoHuBQSKQBMEgSoEGg2rbxAoAk0DBKoQaDRWLdCO3hBogiBQhUCjYfVNQgJ1Vx0CTRAEqhBoNKxSWrhA/VSHQBMEgSoEGg2rlBCoRXXjow4XQKCRQaAKgUbDKiUEalHd+KjDBRBoZBCoQqBBcZLS8gQaQHUINEEQqEKgQXGSEgINFnW4AAKNDAJVCDQoTlJahkADqw6BJggCVQg0KE6qQ6DBorrUFYFGA4EqBBoUJ9Uh0GBRXeqKQKOBQBUCDYqT6uYrUGcpjVcdAk2Q2Qj0mS0jiwQDgU5ktOoQaLCoLnVFoNGYi0CfeUbQoAh0IqNVNy+BeklpvOoQaILMRKDPPCNpUAQ6kdGqQ6DBorrUFYFGYx4CfeYZUYMi0ImMVp24QKdLabzqEGiCIFCFQCczWnUINFhUl7oi0GggUIVAJzNadQg0WFSXuiLQaCBQhUB9mKY6BBosqktdEWg05iFQJpEkMq9NoA8alyDQMd91NEckwEwEyjImgcwIdIqUxqsOgSbIXATKQvr9Z0agU6Q0XnUINEFmI9DlqmRibrnMCHSKlMarDoEmCAJVCNSHaarbm0A7jkGgVSR3ojkiARCoQqA+TFMdAg0W1aWuCDQaCFQhUFfCqQ6BBovqUlcEGg0EqhCoK+FUF1Ogw1JCoFUkd6I5IgEQqEKgruwwl+U1AkWg6YJAFQJ1ZYe5LK8RKAJNFwSqEKgrO8xleY1AEWi6IFCFQF3ZYS7LawSKQNMFgSoE6soOc1le70Og7lJCoFUkd6I5IgEQqEKgQ+wwl2WjXQUQaLCoLnVFoNFAoAqBDrHDXJaNdhVAoMGiutQVgUYDgSoEOsQOc1k22lUAgQaL6lJXBBoNBKoQ6BA7zGXZaFcBBBosqktdEWg0EKhCoEPsMJdlo10FQgjUT3UItIrkTjRHJAACVQh0iB5zdV4jUCfVIdAEQaAKgQ7RY67OawTqpDoEmiAIVCFQg2GLIVAECjUIVCFQg2GLiQp0uuoQaBVpTE8BGwhUIVCDYYshUAQKNQhUIVCDYYshUAQKNQhUIVCDYYvtW6CBVYdAq0hjegrYQKAKgRrc1I+wzmsEikChBoEqBGpwUz/COq8RKAKFGgSqEKga40YEikChBoEqBKoQKAId7ClgA4EqBKrmJtCw+mi9RqBVpDE9BWwgUIVAFQJFoIM9BWwgUIVAFQJFoIM9BWwgUIVAFQJFoIM9BWwgUIVA1RwEGk8frdcItIo0pqeADQSqVivQHcNA7c3ojXYVQKDBorrUFYFGA4EqBKoQKAId6ilgBYEqBKoQKAId6ilgBYEqBKqEBLonfbReI9Aq0oieAlYQqEKgCoEi0KGeAlYQqEKgCoEi0KGeAlYQqFqVQLWDR0agDxqXIFAEunjmKdBntowu7w8CRaDTojrVFYEmyCwF+swz+zUoAkWg06I61RWBJsgcBfrMM3s2KAJFoNOiOtUVgSbIDAX6zDP7NigCjSvQ7oGOQINFdakrAo0GAlWpC/SmfsBorxFouKhOdUWgCYJAFQJVEQQ6fKAj0GBRXeqKQKOBQBUCVQgUgQ4QzREJMEOBMokUlpv6AaO9RqDhojrVFYEmyBwFyjKmoNzUDxjtNQINF9Wprgg0QWYpUBbST+WmdpDor6MKdMSBjkCDRXWpKwKNxjwFumcQKAKdFtWprgg0QRCoQqCOBezr4kcf6Ag0WFSXuiLQaCBQhUAdCyDQaXVFoAkST6CwZ97M0F+/2X3d3Wh0gfZGf8rpvj5vXr/Zfd0t4LQRUQNGhSAwAlWpjED1gcVN7c3NzgdlZkagwaI61ZURaIIgULVggd7Uj4XO61gCDXCgI9BgUV3qikCjgUAVAnUsgECn1RWBJggCVQjUsQACnVZXBJogCFQhUMcCCHRaXRFogiBQtTCB3tT6v/46qkBDH+gINE67WqIi0GjMQ6D594pAnbip9X/9NQK16aP1GoFWkdyJ5ogEmJ9Aiy+5+1rpr8OCQBHotKhOdUWgCbJQgXZeTzIrAh2xxBOBIlCoQaAKgfYXiHmgI9A47WqJikCjkZhAWwVGdJCxJcLhlFrv8je1Nzc7H4zYCIGGi+pUVwSaIPMXaP1sUO3vbgLVX+/oIGMqGxYEGl0frdcItIo0oo+CldkLtHk6vfb38QJtfdDtIGMqG5Z5CTSiPloFEGicdrVERaDRmLtAtd9H0v4+TaCtjYoOUr/845YxNZ+MtZ30bt55jUARKAKdAzMXqP4Lndrfown0j3/ct0ERaHR9tF4j0CrSiD4KVhCo0gT6xz/u3aAINLo+Wq8RaBVpRB8FK6sXaN6/ytR//OP+DSov0D3po1UAgcZpV0tUBBoNBPpgPrYZSU4AACAASURBVAK9qXftwdcIFIEi0Dkwc4HGn0TK+9faBKqrBIEi0F19FKzMXaAxljF1NkKge9BHqwACjdOulqgINBqzF2ighfTZy8qMnY0qgT4QnkS6qXftwdcIFIEi0Dkwe4E2RtP+7iXQOlJno1qgD/buT/Wm1p1v6l178DUCRaAIdA7MXaDamFD7u49Am0idjRqB1qPU9kYR2ZtAO0cYAg0X1amuCDRBZi5Q/arkA1NvqqeA8UFTQItkbqQLNOAzntxAoNH10XqNQKtI7rge8mef3r59+6NoRpklixLowOl8v0C1AnMSqN6Dowp08AhDoOGiOtU1cYHefXZTcPHdaFKZH7MRaO+5c1ugQ6fzvQLVC0wRaKtAAPQejEDDRXWpKwKtIrnjcrg/vLppuPiTaFqZG3MRqDG47BOocTq/W3W99kWgCBSBBhfow8OtNy98//btn/84e3XwRjSvzIyZCNQcXPZNIk0TqOMk0uIF6n5IItBwUZ3qmrBAn7y8HXZ+XL65tx2MHqxlDDoPgXbc2JirGZoOCbRv+GoW6FW0ejB2asqPm3qv1V8j0HBRXeqKQKtI7uw+2I83m6fv1+/ObrXeJs3sBdrobUCg/W40C/Ra1mNq6oGHTG/qvVZ/jUDDRXWpKwKtIrmz81jfnsC3hpzm+4SZv0D754T0v1vPzq0XBpyi2gpor925qfda/XUIgfodkgg0XFSnuqYr0JPN5lLrD9sR6YuxxDIvliRQ21hRKz1cYPeF0gcIFIEiUIOdx/rWl+1Zo9PVnMPbBfr49jvXr19/9fbvPCOP+Ybcxoq2q5V2gVoWR+kbTRJo64MON7Weqr9GoAg0UrtaokYW6Nkt84x9ew7/1C89xbEsLAL99Jq2qut5r5sLxnxDTmNF6+sBgVp9WJsVgXodkhMPdAQap10tUSML9MnLpi67f0mVXoHePdy0ufD6+MhjvqEHLmNF62sPgTa+DibQ1kY5N7Weqr8OItDpBzoCDRfVqa7JC7TR5qoFmi3j2lx87aPi3P3xb9951uv2rDHfUP69Wh5nN/RwpfJ1W4H95/mtqPoVgymTSN2Nerp5jv4agSLQSO1qiRpfoPkpfKPN7Sn8Wq+Bnr2f2bK982fZba4vjGyQMd9Q/r2OE2jrnF9XoGWmSY/aHnU6FLBXw9yop5vn6K+9BRr2QEeg4aI61TVZgWbrPrNJpEagp+a0fLKYAn1ya3Ox75Lndlj69Lgx+ZhvKP9eRwnUGDc2CnQZUBqn7Q5DVls1Ohv1dPMc/TUCRaCR2tUSdQ/LmLJVS41A17uM6clf2i533vs3+xNo34RSy1ydK5cWNzoJ1Hor585qtKK6dPMC/TUCDRfVpa4ItIrkzs5jvTxjrwW6HYCu5BLoTNaB5t9r+6nG/c+O36tAd1ejFXVsNy/YIdCIBzoCjdOu1qjpCrQ8hy8FevbBZjUD0FkKtN+NAQVqnuf3C9ShGgG6edO1s1wRDh7rRgg0Trtao6Yr0GzIubl8+dl84JnZdPNCNK/MDItAj5//uP8Dd8Z8Q/n3av6y29CqpIkCNSaOegXqUo0A3bzu2kWu8AePdSMEGqddrVETFmh20TMnG4GeeC17XCj9At2OxSc/0G/MN5R/r2ME6vT8u05h7WS78udsBFolQ6AIdIECfXLtcs6VrUAfTx58LQibQKdfAx7zDeXf6yiB2m9dMj5oqa77ei4CbbIhUAS6PIGuln6Bnt2a/jSqMd9Q/r2OE6j91qX2By3VdV97CjRcN0eg4aK61BWBVpHcmaqClLFcAz3ZPD11HD7mG8q/1zGTSJ3XNjf6C3SwGuG6OQINF9Wlrgi0iuTORBMkjUWgjz/YbC48d73k+z53ZY35hvLvdcwyps7rCAIdqka4bo5Aw0V1qSsCrSK5M8kwiWOdRNLxuiA65hvKv9cxC+k7r2MI1KhGnG5ede2BSaRntkQ40BFouKhOdU1WoCF0sVTmKVA3H7q4cZJAe9bIRxOofRnTM88UBkWgCBSBzo05LqTPcPGhVXVjN5qFQG0L6Z8pQaAIdKYCPftxdbHvlWc3m2/5PoJ9kSDQB24CbestXDd/c8dGz9QgUAQ6T4HqPLq1mrs4cxDoAyeBGifY4bo5Ag0X1aWuCLSK5M6o4/7h4UqeBFowINCzz0ru/dvVXgOt+p05xROum1sEWk0cIVDPdrVthECrSO6MOu5D3ISzIGwCffQ2k0hNh+wsMgrXzfsFWk8cIVDPdrVthECrSO6MOu5PmUQ6N+fVRj5KuWDMN5R/rwi03qiZOGISybNdbRsh0CqSO6OO+0dvr+RZ9AXWO5E2B8+9cpj9b3Pg92iVMd9Q/r06CLQYiI1x4yIFqo06H7CMya9dbRsh0CqSOxP8kjy2e+GzJ0xv//+N/K5Or4vCY76h/HvdLdDqVHZdAmUhvU+72jZCoFUkd1wO97N7r1y+fPm5d9c0gZRhW0ifP0zkJF+RcOz3aLsx31D+ve4UaHMxMKZAezvkfieRDIFGOtARaJx2tUZNWaD1L6F7nq8ulsHH2Z3mP6136vcDe2O+ofx73SXQznSKixsDCXS/y5gQ6PR2tW2EQKtI7uw+2E82+SPpL29W9GMeBTsEWvxUlNc5/JhvKP9eZy3Q/S6k1yeRph481o0QaJx2tUZNV6APD6vf8v306mb6kzCXxODzQB8eZh71XNg15hvKv9d5CzRWN+8VqLaMafLBY90IgcZpV2vUdAV63MyTnN1ayy/CF9h+E6n8nefMo4VGRzPmG8q/VwSqbVQvpJ988Fg3QqBx2tUaNVmBFrPNJaeek84LxSLQ7Zj8+Y+zhnmx9c/LGMZ8Q/n3KjiJZLHYpG5eKtBdoK0CfU9mQqAIdJYCbZ2jcidSznF+/9HpZnNw6HlZOLxA4y1jiiDQ6iTcWaCtAr3PBkWgCBSBzgzrvfC/yU7cz/JfK53NOtBoC+nDC7SeBnIVaKtA/9PpESgCnaVAWz+hxsNEKv5l2w5ndy9ffs2vPWIINNatnMEF2lyvdRRoq0Czbh+BItD5C5RJpBiM+Yby7xWBItBpUV3qikCrSO7sPNYfHlY/QvnoFsuYAjHmG8q/1z0LVOuQCxKo49SUS10RaLioTnVNV6D5QvoLz+UPpGchfc3jDy9vT+B9H9CPQCMI1HVqyqWuCDRcVKe6JizQ4lakzfpuROoT6MOrm82Vj5s2eWGe10DbE0ozE2ikSSTnqC51RaDhojrVNWWBZqOtw83Gf7y1VLoCLbx58JPT+t8Uv4vCkQVqLGmam0CjLGNyH9e61BWBhovqVNekBbpWOgJ9uP135OL1q5sLxe/rPc6eTD+TpzHpryuTzFagMRbSI9DpdUWgVaRIAn384ZVVrwM9KUacx/XVjGPPIWhUgTYqGSVQS4eMIlDHAu6pESgCnbtAH71zuPLfhT8rlyFsB6LlcoRsicI8buXUXiPQ6XVFoOGiOtU1dYHee3vCT6gtFVOgT14uxLn9b9kOzatx7FWgfddD0xMok0jT64pAq0hBBXr2z1cLe15Z2TPpewSa63JZAu29HpqgQFnGNLmuCLSKFE6gZx8Wz6O/8NrHHqJYNgsVaHsSqf90fq4Cbc8PjRMoC+mn1hWBVpHCCTT7Dd+D53/hIYnls1SB6suYtOFot4BLh9yrQI0VSiMFGvBAR6Bx2tUaNWmBbp5f2bl7yWIFqi2kX5RAzTXyCDRcVJe6ItAqUjiBnv/27fwc/uDVjzxEsWyWK9Du6fx8BdqceBt3aY45I0egCHSmAt1y9vNr+XXQiyu7FwmBmv0rwsGjTf20BTpqTgiBItD5CjTj0YfPsozp5U2XmQu0M4k0tkNOEmhLgb3dXF981BLouFVJCBSBzlug5+eP/3nqQvpjd/N4/tZQWJIQqLmMaWyHnCLQtgL7unkzQDYE2vog2sFj3QiBxmlXa9TUBXqvuBK6+YspWnMR6N0iQyXQu5MSTqRzJ9KPr3f5/uzuRDJf1zPyXh1ygkANBfZ187YntUkkBBo4qktdEWgVKahAy7P36ZdAHQRaibP8r+xANMkHKo/tkGMFWq7kvNlz+bWnmxue/GP26o/twggUgS5YoGf/UKyjDzEJ76BDYxMEujSBVis5/QTanPMj0MBRXeqKQKtI4QSaXfd7KtAyUARasWeBTumQ4wRan4Q7CrQ9V6Q7k0mksFFd6opAq0hhBbo9e//HEB5bukDP7Ddk/XZcNVMVaDMN5CpQfbVSu4D2QbSDx7oRAo3TrtaoyQr0/PzetfJm+MmLQLs63Or5xbPsEuuF/PeBT+pfDsk3rd4+PCwfv7ndfJ8/C9qdhb/Y/0CAR1dHzsWvQqAuk0gP9PXyhnGbD6IdPNaNEGicdrVGTVigWz4tHmZ38Py0C6G9Av0fy0c9XfylVaDbrYqCW5N6PQDek74HKj/fVeinV0f/WtQ6BOqwjKn1ujNkdU+NQBHojAW65VGxjincOtDqyZqbg7+5n/1icuGg/ln44/IBxif7XcjfvQb66Ko5FM8fM31x7K89r0SgDgvp9dcItNlrBJqYQM+zH/Q4jCHQfEx5dqu9bqkt0NNiq+1G+zyD751Eupv/O3Ll+j/dvn3759cv53vy+ujrtPEFGqybj51EyhcimT/55tjNzXN+BBouqktdEWgVKYpAt5z9X8EW0lcCLc/qjws39wu0vPa55zP4/ln4s0KhNRfG6zNhgZpTPyO7uXHOj0DDRXWpKwKtIkUS6NmPve67qei9BlqOKU+GBFrqdc9n8NZlTI/euVza0/ennpMVqLn4aGw3b9sXgYaL6lJXBFpFiiTQJy9PPIXvm4UvXg0LND+H3/cZ/PA60M8++8w/cqoC7Sx/n9bNJwi0PYU/ugUQaLioTnVNWKCfvlPf9/3K4cFz16//O99RqL9A85Hqvs/gF72QPlg3X6ZAd15JQKAIdD8CPe08f8hbY/4CzV+c7vtheksTaJRuHl2gzc3znQLeAt19JQGBItC9CHR73tzB12MTBHq6OfjJ8Z7P4BFop3/tiuohUO3m+U4BX4E6VAOBItC9CPTJywc/0d4IXQPNNvzWy3s+g0egnf61M+roSST95vlOAYfUlX0RKAKdqUA1Z8oJdPvqwuG+H4ePQM3+tTvqyGVM5sr7sQKt7YtAEegsBXr2D881I9DJy5havNgj0JPtqfrZ72pzVm+LS7F7PoNfhECjd/OxzwPdNf0dVKBNYQSKQGcp0JA4CDSfsrqk34JUerO+Z2mPrEmg1psuXQTalqa2Ud/lTfVAmziaJlDtN0DaGzGJ5FVXBFpFWqxA81slL91vftKjeHte36q0T1Yk0F7fuArUOG1vNuq9vKn0iaNIAmUZk1ddEWgVKZxAw/2Q2kRO9n4GP1uBTug6lrFi/xmvo0DN4V69Ub8b2xNHkyaR7AJlIb1PXRFoFSk9gZ7d2vsZ/LBAz6Y8HlVKoJaxYnPN0EOgnQuO1Uaa3lpR26POKcuYBgQ68UBHoOGiOtU1WYE2v0T5ymH2FCL/X6KcxsO9z8EPCTR7yPRTv3zyl695NoSQQG1jRUmBTlpIb5lEcj54rBsh0HBRneqarEB17gpIrOTRrbHPLA6ATaBn7xfD8O3o/KJfg4wW6HD/cuw6VtWJCnSgm+8UqGUZk/PBY90IgYaL6lTXVQj0/ETAYkVekcsGNoEebzYX/3r7j0n2i6V+v9mEQAMJtH8hvfPBY90IgYaL6lTXdQj04aHMb7ydbo3V/2tEUbEIdFub18t7Cu56Pt9kZgIVnEQa7OYOAo10oCPQOO1qjboOgU68E2lpWAR6XCzAKhf+e60NmJtAxZYxDXdzBBouqktdEWgVKZJAJWZyBOkX6Nmt7OkApUA9W0RGoEO/td5SoB417kL64W6OQMNFdakrAq0iRRKo7M+0751+gRbqLAXqOSYXEqjjb61X2zgL1KnXelytRKDhorrUFYFWkcIJ9Oy3tyveeXb0z/cum/QE6vRb6/UoNahAfebLEWi4qC51RaBVpHACbS+kX9UZvPUUPps4Ks152hmT//7vjo5e+sEnxZtvfnrj6Kh6oyEmUIeNmuukIQXqtWITgYaL6lJXBFpFmiTQr9/6XvOmJdDn13QCb51EyieOCoF2f6bpV0c5L/0se/P1W/mbb//aDDFjgWpLmgIK1O+eIQQaLqpLXRFoFWmSQO8caQI9f/xZha+HFotFoA8PNy/czwX66OpGe9x0xhdHL/39+flX7xXSvHP03U+yN9/9gxECgTrVNZRAe2bIECgCjSPQb+4ctQS6YmwL6bN1/ZcPD557dmNeFP7mvaMfZf/dDj23//3yRq7Rr98qxqMaCNSproEE2rdGC4Ei0CgC/f3fHiHQEuu98L851B7Jp/P1W+Xp+p2jH56ff1425OfZmxYI1KmuYQTae5cAAkWgMQT6+dHRf/xXBFpgf5jI4w8vb+154Xnr7VG5QO8Uw9Hteb3ZoDMWaHKTSNq/CO6HJAINF9WprskI9Dv/ped4Xyn+zwPNz9q/ea88df/yRnUR9M9KxsT6U8abOcXrP3VfdzcaLjC4UWGb0FELf4aO6tACjUBDRo1TV6LOI+oIeg7pSAL976OIUYOx+As0P3lfqkD/VPiziFq+ftN8XW/kHLXwJwIl6vyjjgCB2rEItFmXYFub8EW+jEkTqLmQac6n8K2o+q1LrduYPCZmxteVU/g47WrbiFP4KpL3KXxx+McR6P/nzpwF2nlG/wXzscpf3Hgpu/jZMwKtWIpA6+uhN40favOZmBlf1yACZRLJua4ItIqEQEPgKNCNsRj083IZ/fIF2gzejJ8K9hrVja9rGIGyjMm1rgi0ioRAQ2C5lfO3H2yV+f3bt2//+HBz8Nrtd661b3H91VG17HOZs/Ba1EQEykJ6x7oi0CoSAg2B5Rpo81vM53dzdT5q/pDdh/Cd6oJntf5zUetA9aipCHR8CyDQOO1qjYpAd5KMQI+15fPFA5W1R4rc0e7bXOSdSHpUBBqnXYcLINA47WqJGlmgza9yanj9KmcqAi0eqFxS/MhJ81jlz/X73r957+g7i7sXvhU1iUkknxZAoHHa1Ro1WYGG+134VATaegRo6+Gg9eOXjsrbYb9a4NOY2lErZ95UC1jG5Pice5fUCDRcVKe6ItCdpCPQ1gi0JdAvjloCPf/qp9tXPzDHnwsSaOsJzPprj4mZ8XUdJ1DXX1pySY1Aw0V1qmuyAtW8UXqzfjGSVAR6fqw9A/TYvAbqxnIEGu4nPWIL1Pm3Pl1SI9BwUZ3qmpJA+0GgFaebzQuFL8/e32RPp797OPanThCoU4ExAnX/tXmX1Ag0XFSnuiLQnSQj0O2wc7O5cv369eyJTJfyixzGY5V3gkCdCsQQaOs6hDUqAg0X1amuCHQn6Qg0G3iWfOt+1h4Hb4yMjECdCkQQaGsmDIEiUAQaj53PA33td+fZQq9/HL2qC4E6FQgv0NZarIGoCDRcVKe6pi/Qkw0CDQYCdSowRqBOk0ituwGGoiLQcFGd6pq8QB8eigv07NbOuZqzD1+wfJKvNDoZN9njINCzD/98Ub8Ln7BAXZYxIdDBjRBoFSm4QO8ebsQFunX4rtVCp+avDNdEEein1zzXxM5CoO3pFFvU5QjUYSE9Ah3cCIFWkQILNJs1uVj9hK+Dx3rpFWjW510FevzUX+2a7d4h0JEMC/Tsw0PvmwrmIFBjOsUWdUEC3R0VgQ5uhECrSGEF+vBqtlDneFPY6WQTTqDFWZebQJ+8/PRdqx9L9ifQbPCZYf9duSFmIFBzOsUWNSmBMok0uBECrSKFFGi+aGc79DstfsX3bvfHfN3oEWh13d9JoKebF2sLlg9EKp6F9Chz2eXX84uk+crM7ZZ3DzcXt6PVe9eqJ8brp/DNX4exCrQcfG6uvOvTEOdzEGhnLGaLmpZAWcY0tBECrSIFFGg2/Nxc/LjSk/dZa49Am5UnLgI93kr8eFOsuNQF+rD8kfZLmkCfO8yHydV6zUstgWp/HcYi0HvXpjRDDgJ1KhBBoCykH9gIgVaRwgk0f5hIcediZdCLXmetUwWaPziuuulcE+i2Vt/a/u3eYXZ99LS8Nb3Y7HRzkA0R72bj50ag+l+H6RPo4/dzXx9sFY1AY3fzCQJtTyiNrisCDRfVqa4pC/RiLZp71y5f9j5tnSjQXH7Vk5A0gbYejlQJtLXVVrFvaALV/zpMV6D3rhYXPj/yXotQgECdCvgL1FjSNLquCDRcVKe6JizQF3xmjHqYJtCzW7mvSvu1R6AXP6q2Ou08HOnxb9+5umkJVP/rMKZAi0f7XXz3/rn/Yq4CeYGmPYlkLqofXVcEGi6qU12TFejZv3hbwmDaJNLDw/yS5elG92h+DfQkt1pxO6Uh0EdXy8udLYFqfx2mR6AXq9s2Fy/QlJcxdW7rHF1XBBouqlNdkxVoOKYtYzqpn9+Raa81C3/32fzv2Ui5EmgxP5RNLx1cefWj9im8/tdh+kagV0qDLl+g6S2kR6AIdIYCPfvw8uXX708fi05aSK89GD+TY0ug26r987VicVVLoNuT+0v3z81roK2/DmMKtHwK04XX7ychULcOiUDjtKu9AAKN066WqLEFWq4Nyh7bdvA33sY4n3grZ71C/mE+224INKvmB5t8ll4TaDW9tHWdJtDWX4fpmYUvZ5GufIRA99DNEWicdrVthECrSAEFuj13PjgsriI6LJ0cYJJAqwWg5RNFCnNmg8n6FzHLZU49Aj3d5N40BHq6+36A3nWg1SL6ha8Dde6QSxQok0h+dUWgVaRwAt1K6oVMWFs7PXp79JPXdaYIVLsR86QYaW5eP390q1w9//TH59mbS9X0UesUfjs0bQm09ddhbHcibRuiuOr6O9+2QKBOBbwF6riMyX4V2EWgPRkQKAI1KAZs5TDvZMoQdIpAtcQPD7eD0eK6wlP/t34n0sVfFq+fvl+d758WHzz9Qb5ctFlI3/x1mIF74ctT+YPd94P2gkCdCvgL1Gkh/cA6BAeB9o1xESgCNah++Dwfe+anyb5MEKg+4ZOft5+fvZ3dEVWY8tHbh/Wt7b851ASaa+7C6/m4VFvGpP11uMaDT2OqTuWfXurTmBw75EIF6lDXoZWwuwXae5UVgSJQ0xP5AvbSYD6PNKpJ74n0+an8Yh9n59ghkxXo4L1YOwXazFMhUAQ6xHG58BKB9nHvKgKN181nIdD2xYAqajSBxrqy2tMCndcItIoUUKDF+XBx8lvNeHuRpEA9QaBOBeYgUGM6qooaS6DRrqz2tEDnNQKtIgUUaLFuKL9gmE14i1wDFQKBmv0rWFS3AjMQqLkgqooaSaDxrqz2tEDnNQKtIgUUaPZzSAfPvXKY/c/zUcoFCLQBgToViCHQ5ozcZRLJWJKvnc5HUV3EK6ud1wh0LwJ9Uj9GeeLacQSqgUCdCkQQqH5G7rCMqS3Q1ul8jJNtBBo2qktd9/FA5Qq/HwAqQaANCNSpQCiBNtprn5HvXkjfEqhxOh9hugeBho3qUtfYAv3f3v2sZOJzQRFoAwJ1KhBIoI32jDNye9Q+gXYKh28BBBqnXYeiLvpxdggUgUYXaM8Y0lmg+qhzDwJlEilSuw5E3adAz378fWbhQ4BAnQoEEag+qjMcWJ6EDwlUu+7pKlB7VIcW6LtIMD2q47eFQKtIkQTKQvpAIFCnApEF2rixE7VvIb2jQAeiurSAVliPNDEqApUT6KfvXK/IFjNdv/7v/Eah/30UXikCMyTQ6sLwZ15PZEKgTgWCC7Q1D6S/flDPKLUs1h9psAWMjfq0t6MFKosN1BWBLkegp5sOux5E3E86Aq0eZ+e/sguBOhUIL1D7Gbm+JrSWlRF15zCwE7VXe24C1SM5DH4R6DwFenarK1C/8/hkBNpa2YVAI3bzIAI1JmZKBZpS0u9Kav5uRq0LW1ugHbVfewh0RQJt/ez6tGugqQj0ZLO5+Ortil/4XNBAoE4FwgjUsuS9JaXmvs7WkNW5rv1a1iKNaAEHgZbpEOgSBKo5c5pA/xd35izQ4oGk00CgTgUCCbR/yXtIgVaK3pNA+/5FQKDzFOjZPzzXjECnLWNKRKCtMbknCNSpQCiB9te1dtJkgeqR+l57CdQ+idQejSLQWQs0HOkIdMoTAQoQqFOBuALV54QmCbQ9PtSiThOobRmTX1SXbwuBVpHCCvTR289mP4f+mvdvqOWkItCzW4xA99TNIwtUnxNym0RyEaj9kU2VAo2NzKiNxfSNmtcINGQf2INAT6oJ54m/C5+IQMuHS08CgToViC1Q/bXLMiZLVEOgpqKrq5V6VH1waUbtWMzYCIEG7QPRBZr588IrhweXHX4IeIhkBLodgr4+MTICdSqwT4E6LKS3RR0QaN+DoJT9Mc3NXiPQVAT68HBz8eP8wt/Z+9N+Fz4RgZ79+JXtYPy56u4sr2k1BOpUYK8CbW3k8rvwTYFBH5avNe11l3W2CuwSKJNIzlFd6hr/R+Wyn/EoZk6OJz2RPhGBttfRs5A+YjdfikAHz8jL1wEFyjIm16gudY1/J1Lze5y7f0p9AATagECdCixGoENzQuXrkAJlIb1jVJe67mchffEfFtIHAoE6FViOQHdvFFSgkVoAgVaREGgIEKjZv4JFdSuQkkDDTSLFawEEWkUKKdB84qhQ58NDTuGDsEaBVrPcaxWofRlT+/x/rECrQEsQqL2uyQq0nDgqBHoy5S7wpAR6Vj0O9N6/5RqoU9R6neVqBWpbSG/MQI0UqK7lqXWNLdCBuqYr0NNNtuoxF+hd30eB5qQjUJ4HOj5qc6fPegXaX1fzdH6cQPULAy5zWYNRIwt0qK7pCjR7IOhf3N+eyf/11c2kxxAFEGiI29BH4PQ80KcRqENU7V5zBNraqDOhNEqg+tSU02qqwahxBTpY13QFev7k6naUVUjjhSm/bJyMQE+ydfTZr5u8crjxvCcJgTpVA4HuitqS0uDUAKfKFgAAIABJREFUlEtd9yhQs64JC/T87MM/zwV65V0vWVT0CjQ7pBYm0O2Q/On75frYE8+FsQjUqRoIdFdUXUqdSKPrGkWg9UBzoK7t0/kg7epc1z09zu7xlMFnTp9Ai2NqWQIt1yUUjxQ59rsqjECdqoFAd0Wdv0Cbgaa9rsbpfJB2da7rkp8HWh1UYwV671r+eL3M6VuDPby6OXit8Hv7g7vPbjbPf+xf48HngZ7mF4RP/S4Lr06gC5tE8lhyNbZd643Mk1nvSaRZCrTryW5dOy0QpF1d67pggTbDknECfb+cv8ncdbx59bB6bXxwecIv4OXsEGjxjACvc/j1CXRRy5h86jq2XZuNzPHXKIFqS4PmKFBt1Gmta6fegdrVsa7rE+jp5iC7Gns3fzbU8Wbz9Mfndw+zU2nzg0v3yw88GXyg8sPDCfdmrVCgC1pI7zVaHtuu2kalP/0Eqq0uNUdyo+saW6D9dUWgbgQTaPlMqGIa57gYYuazOcYHTxdn8v4PkLLMwle3FmQeLTQ6mjUK1KOuMgL1u14brgVGClSLaoxlR9c1ukB76zok0Pa/LdPa1VLX9Qk04/Fv37m6KTz5YusT7YP8rH7KzVMWgT48zK6sbjX9Yq3psSBQpwIIdGTUMb4RFqjll6DbUUf9i7A+gfpOIj26Wl7rfKOeBi/Oq9sf5GaNINDs6sC2HqebzcGh50P6EahTAQQ6IapxYcClrpEnkWxRjUsPjTPHXZNYoUD9ljFtR4CbgyuvfnTLFKjxQTSBnv8mO3E/O85vRGIdqE9UtwII1D+qMXhzqmvcZUyOdW0KdIam09rVUtdFC9RnIf323PlSZq0zU6DmB/EEen7+L9tEZ3cvX37Nb3ksAnUqICPQvU8ixRCoOXhzqmvchfQDUbXRsuZMQ6C7htSrFKgFU6APr+Xn7vmUTbmQPbslvfFk9knvB5EEOhEE6lRASKB7XsZkFggh0KGJmT0L1K0Fqq9av2ja3omdQ+pZC/Szzz6bKo1JAj3M3Zivvaw8ebrRZnEyT5ofIFAE6lnXfS6k7xRAoH0C3T2knqtAH394uZyaufzqhNt6Jgm0uP/80dVMisWZ+tkHm9KT9XJP84PgAj37cfYbnNv/1+FXOScfPNYCYgLd5+PsOgUQaCnQkYtFZynQs+x2SI2D173viZ8i0GxUWd9WVL5++oPMjceb6/m7F7sfBBfok5c3+SUEflQu7MFjLYBAfaOmIVDHxaLzFejZ3fw2ycvX/+n27ds/v36tUKiHMDImCfT84Tb5Qfk4vXtXN5sLrxcn9Nkt74fZu+4HCBSBrlWg9qVBQ1FDCdRjuqf+qtuerCMtUqAPtz46aJ22P/5wOyC96HciP02gNjwfh+QE10DN/hUsqlsBBOoftTXn0nf5MJ5AfaZ7mq+6v65LFOjJ1pUfdf6a/Z6F1+JxBNqAQJ0KINAJUbVhYK97ognUa7pH+6r7R8teUXfW9UFEgT552TLUfHTV67QVgTYgUKcCCDRI1PZ1xYH7PacIdOLJ9nAH9x3Xaq+tFzGiCfTsF9aPfuszk5SAQB9/1uV3PpERqFMBBBokqm1iplNggkCnTvfsFui0hfT2ixirWEhvZ58CNaaPmETyj+pWYBYCLdeEpiLQ9qlwW0r+AtWiRhPolHYduIixcoHGBIGa/StYVLcCcxBodVdSIgJt680YjXoLVI86R4EaFzEQ6H7oLKT/7e2cDzabg+//0+3b7zy7OXjtFyykD9XNOwVmIND6vvgFC9R6f3l7NBpIoJMnkdISqHHfzYS7b5Yv0JLtQLRahnDX8xdDEKhTAXmBNk9mWrJALU84MseKrdHoqHYdHNc61TWUQMvM8xFouNPWZASqP+Tec50+AnUqgEBDRa2NNiDQ3nGjj0AnLaSf1q6Gu6sCCFSEwd9EKnh4yBPpfaK6FZidQNsTSpFaIIZAmwLaCXbfuHH40ccuUf3qOlaguier1+bVA83jvTu3L4EG+i32VATa+h05flQu1oFu7nW4qC4b9QvUmFCK1AJxBWpbcNQ/SPOI6lfXkQI1Pdn3u6StKvUNr5cm0FEESTkRm0BbI1AEGulAfzAHgbYmkcwJpUgtEFmg2sBMH7AZAm1GdQNRe4aB+xFo/8h58NfmW37XoyLQaFivgV7qfT0CBOpUYAYC1UadneuhkVogtkA7IrrZFWgzqhuIah/Vja/rKIHqddVe+/3a/GIEujwsAj3dbMrHQp29v/Fbx49AnQrMQaDNdc8EBdozGm2vtvdcnD6+rgg0QQZ+lXNz5fr169mjUl/wioxAnQrMQqD1RikKtN+HupQetM/OLcadXNcgAh15QxQCjYxNoNnAs8TruVQIFIHOT6C9i0XNpUHa6zkKdNwt+Qg0MvanMeXPRd1ceM3rSSLnCHSRAjUnkXpm5Bct0L7Foqp/pklYoLZJpAe2GbKhqAg0GjzOzuxfwaK6FZiZQNvLmPpm5Jct0PpWTl2g+kiuNaqTFKhlGVN7o2Y0OhgVgUZjUKBnvqPPDATqVGBuAtUX0veeziciUNvSoPZpce8p8p4EallI396oGY0ORUWg0bAL9N617HasJ3/5mudP7CFQpwKzE2jzurkgmqJALYvT2wKVW8YUtAViP43psd8jg1NgeBJpK9CXNxf9/nFBoE4FEGicdrVtpD2NqR7VDQjU8afqnOqarkBXzMAypot/ffjUL8/+YbPxuhUegboVWI5A2zfJT6vrLATaRNUnY/TXXu1qrSsCTRD7QvrXy5vg7x6ykD5iN1+MQI2b5KfVdWYCtS1j8mpXa12TFWj3V9DXc1V06HF25VNEeJxdzG4+Y4G2JpHMm+Sn1XVuArUspPdqV2tdEWiCDD3OrhQoDxOJ2c3nLFBtGVNnhf20us5OoJF6VmujZAVqPJH++/ezv3g9kX55DD3OrhQoj7OL2c1nLdBmIT0CnV7XZAW6ZhCo2b+CRXUrMG+B1gUQ6PS67lWgresQCDQatlP4bOKoNOep3zQ8AnUqgEDjtKtto5UItD0ThkCjYZlEyieOCoFuZcokUqRu/mAxAk19EikxgRprsfY+ibQeLAJ9eLh54X4u0EdXN9rT6UeAQJ0KLEWgaS9jCtmu1qj7E6h5NwACjYZtIf3JtiEuHx4896z38+wQqFOBxQg05YX0QdvVGjVZgTaz8K8cbjbPrWT+vcB6L/xvDnkeKAKN1QIINE67lq/3LFCde36/4btYhp4Hejl7HujzH3tGRqBOBRBonHa1bYRAq0hxBLo9d/UccS0Tngdq9q84B4+1wDIF2j6dH19XBBosam+B9iRS761VsQT6cF1DUAT6AIGOjmpMKI2vKwINFrW/wO6b+2MJ1HPZ+FJBoA8Q6Nio5pKm8XVFoMGiWgo0o07L46ViCdTzzu+lYgr07P+83sVrWg2BOhVYoEA7i+rH1xWBBou6q662B5zGEuix5+MvF0pHoLc2XbiVM143R6Bx2tW20doFWo9GAwr07Le3K9656r1sZ5l0TuGPN5sLlw2uINBo3RyBxmlX20YrF2jzOqBA2wvpV3UG3xVotoL++Y8CREagTgUQaJx2tW20boE2b6IJ1Hvd4zLpTiJ9em0TxKEI1KnAAgXKJJJfXWUEavuh+4ACPX/8WcVUayyO3ln4e1e3Cj2Y+E8JAnUqsESBsozJq65CAtWXMUUS6IqxLGM6+/DZqQ5FoE4FFilQFtL71FVKoD1LmhBoKIZu5TwMMA51408Zb+YUr//Ufd3daLiA00ZEJeqqolb+fDP0Ifzo7WzIdeG1tf1A/OBC+kdv5w591cuhjECdCixzBDq1roxA47SrJarWwWMsYzov5p5zDv7GRxbLZdedSJ++zTpQBIpAkxFonIX0mT8vvHJ4cNn/6W0LZZdAH71ziEBjdvMEBNo3oYRA5yrQOlJAgT483Fz8OL8L/ux9z+evL5VBgRaXQTcHL3ArZ7RuvnyB9i5pQqBrEmhx+2bxGJHjdQ1B7QItJuL9Z5EQqFOBxQu0vai+Go0i0BUJtPgNylKgnr9BuVRsy5jypaCT5uARqFOBpQu0uS0p+3s9GkWgKxJo6/fPeZzd+fm9a1PteY5A1yjQZjSKQBHoKui5lfPtAPY8R6ArFKj2GoGuSqD5xFGhzrU/kf4k1Op5BOpUAIHGaVfbRgi0ihROoOXEUSHQk82l6fJYDn2Ps7vIA5URqHNUbRIJgQ5GTVegp5uD10uB3t3kE0qrgQcqm/0rWFS3AosXqLaMCYEORk1XoJk1/uL+9kz+r69u1jUA7Qi0/WxUBBq9my9foNpCeiaRhqKmK9DzJ1e3kijc4bVofLnwo3Jm/woW1a1AAgLVNmIZ00DUhAV6fvbhn+cCvfJuNKHMEwRq9q9gUd0KpCVQFtIPRE1ZoDmP1zX4zEGgZv8KFtWtQGICdawrAo3TrpaoexLoGkGgZv8KFtWtAAKN0662jRBoFQmBhgCBmv0rWFS3Agg0TrvaNkKgVaQQAn3yb2zXPO/++TruR0KgZv8KFtWtAAKN0662jRBoFSmIQG9tLvYp9NOrm6cR6DQQqFMBBBqnXW0bIdAqUgiBnp+9v9lceL09eZQ/iWgtq5kQqNm/gkV1K5CwQNu/PNcqgECDRXWpa8xroPlz2y68+ovix5Aef/ph9r53WJokCNTsX8GiuhVIV6DGbx+3CiDQYFFd6hp3Eunus8aNN9l9nWsBgZr9K1hUtwLJCrS+KwmBJi7Q6gluJVc+iuaUGYJAzf4VLKpbgVQF2twXj0CTF+iWx7ffuX79+qu3+VnjUCBQpwIINE672jZCoFWksAJdKwjU7F/BoroVQKBx2tW2EQKtIiHQECBQs38Fi+pWAIHGaVfbRgi0ioRAQ4BAzf4VLKpbgVQFyiRSZyMEmiAI1OxfwaK6FUhWoCxjMjdCoAmCQM3+FSyqW4F0BcpCemMjBJogCNTsX8GiuhVIWKADBRBonHa1REWg0UCgZv8KFtWtAAKN0662jRBoFQmBhgCBmv0rWFS3AisRaPt0HoGGi+pSVwQaDQRq9q9gUd0KrEOgxoQSAg0X1aWuCDQaCNTsX8GiuhVYhUDNJU0INFxUl7oi0GggULN/BYvqVmANAu0sqkeg4aK61BWBRgOBmv0rWFS3Agg0TrvaNkKgVSQEGgIEavavYFHdCiDQOO1q2wiBVpEQaAgQqNm/gkV1K4BA47SrbSMEWkVCoCFAoGb/ChbVrcAaBMokUrPTCDQtEKjZv4JFdSuwCoGyjKneaQSaFgjU7F/BoroVWIdAWUj/AIEmCQI1+1ewqG4FViJQowACjdOulqgINBoI1OxfwaK6FUCgcdrVthECrSIh0BAgULN/BYvqVgCBxmlX20YItIqEQEOAQM3+FSyqWwEEGqddbRsh0CoSAg0BAjX7V7CobgXWKFB9Rn7gqctRWgCBVpEQaAgQqNm/gkV1K7BCgeprQod+9yNKCyDQKhICDQECNftXsKhuBdYnUP2upMFfnovSAgi0ioRAQ4BAzf4VLKpbgdUJtLmvU3+NQBHoIkGgZv8KFtWtAAJFoEHadSgqAo0GAjX7V7CobgUQKAIN0q5DURFoNBCo2b+CRXUrgEARaJB2HYqKQKOBQM3+FSyqW4HVCZRJpEjtOhAVgUYDgZr9K1hUtwLrE6h9GZPxxJGmcLUNAkWgMwOBmv0rWFS3AisUqG0hvfnMu7pAbVwEikBnBgI1+1ewqG4F1ijQ/ls5zdP5Ompzzo9AEejMQKBm/woW1a0AAi0/6EwoVVG1WScEikBnBgI1+1ewqG4FEGj5AQIN0K6WqAg0GgjU7F/BoroVQKDlBwg0QLtaoiLQaCBQs38Fi+pWAIGWHyDQAO1qiYpAo4FAzf4VLKpbAQRafcAk0vR2tURFoNFAoGb/ChbVrQACrT9gGdPkdrVERaDRQKBm/woW1a0AAm0+aC2k71ks2olqXXmPQBHofkCgZv8KFtWtAALt36j3dN7YyDpkHUiNQKtICDQECNTsX8GiuhVAoL0b9U8otTeyXjQdSo1Aq0gINAQI1OxfwaK6FUCgfRtpM+/WqNZp+8HUCLSKhEBDgEDN/hUsqlsBBNq3EQL1a1dLVAQaDQRq9q9gUd0KINC+jRCoX7taoiLQaCBQs38Fi+pWAIH2bYRA/drVEhWBRgOBmv0rWFS3Agi0dyMmkbza1RIVgUYDgZr9K1hUtwIItH+j8cuYepY0IVAEGhkEavavYFHdCiBQy0Z9Szz7LKu/No2LQBFoZBCo2b+CRXUrgEBHRm3ffVQX6D3nR6AINDII1OxfwaK6FUCg46Iadx9VBfpnnRAoAo0MAjX7V7CobgUQ6Kio5sRRVQCBDkVFoNFAoGb/ChbVrQACHRO1s3SpKmAI1HKe/wCBNpEQaAgQqNm/gkV1K4BAx0R1FKjlPF/b64jtao2KQBMEgZr9K1hUtwIIdExUq0Bbk0i283xtryO2qzUqAk0QBGr2r2BR3Qog0DFR7QLVljENbIRAm0gINAQI1OxfwaK6FUCgo6IODC7rs/YhgbZO7eO0qzUqAk0QBGr2r2BR3Qog0HFRBy5vVgWchqnx2tUaFYEmCAI1+1ewqG4FEOjIqPYJ9qqA24XSaO1qjYpAEwSBmv0rWFS3Agg0fLvazvONtU4IFIFOBoGa/StYVLcCCDRCu1rO8xGoHgmBhgCBmv0rWFS3Agg0Rrv2n+cjUD0SAg0BAjX7V7CobgUQaJx27dsIgeqREGgIEKjZv4JFdSuAQOO0a+9GTCJpkRBoCBCo2b+CRXUrgEDjtGvzgX4635pcqq6TIlAE6g0CNftXsKhuBRBonHatP2hPKGmva5kiUATqDQI1+1ewqG4FEGicdq0+MJc01bdyNqfzCBSBeoNAzf4VLKpbAQQap13LDzqL6iuBahNKCBSBeoNAzf4VLKpbAQQap13LDxBos9MINAII1OxfwaK6FUCgcdq1/MBVoP0LR8O2AAJNEARq9q9gUd0KINA47Vp+4CjQ9kxTpBZAoAmCQM3+FSyqWwEEGqddqw+cJpHMjeK0AAJNEARq9q9gUd0KINA47Vp/YAwumwcqN8uYOsPUOC2AQBMEgZr9K1hUtwIINE67Nh+0L29qT6SvxIpAEag3CNTsX8GiuhVAoHHa1bZR3096IFAE6gsCNftXsKhuBRBonHa1bYRAq0gINAQI1OxfwaK6FUCgcdrVtlHvj8oxiYRAPUGgZv8KFtWtAAKN0662jfp/lZNlTAjUDwRq9q9gUd0KINA47WrbyPKzxiykR6BeIFCzfwWL6lYAgcZpV9tG/C58FQmBhgCBmv0rWFS3Agg0TrvaNkKgVSQEGgIEavavYFHdCiDQOO1q2wiBVpEQaAgQqNm/gkV1K4BA47SrbSMEWkVCoCFAoGb/ChbVrQACjdOuto0cBNqeUArXAgg0QRCo2b+CRXUrgEDjtKtto90CNZY0hWsBBJogCNTsX8GiuhVAoHHa1bbRToGai+rDtQACTRAEavavYFHdCiDQOO1q22iXQDu3dYZrAQSaIAjU7F/BoroVQKBx2tW2EQKtIiHQECBQs38Fi+pWAIHGaVfbRmMF2nM9FIFCDQI1+1ewqG4FEGicdrVtNFKgfddDESjUIFCzfwWL6lYAgcZpV9tG4yaRek/nESjUTBfoNz+9cXT0g086f0egTgUQaJx2tW00ahlTMxxFoA6H/BqZLNCv3zrK+PavzQ8QqFMBBBqnXW0bjVpIj0D7BGo95NfIZIHeOfruJ+dfvXf03T8YHyBQpwIINE672jYadSsnAu0TqPWQXyNTBfrljfwfoq/feulnxicI1KkAAo3TrraNEGgVyVeg9kN+jUwV6OdH3yv/+0PjEwTqVACBxmlX20bjHibCJFJXoPZDfo1MFeidox/l//2ibNUGBOpUAIHGaVfbRiOfxsQypo5A7Yf8Gpko0G/eK8fxX96oroj8WcmYMH/KeDOneP2n7uvuRsMFnDYiKlGHo2b+XEpdR0UdQeuQ7jnk18w8BAoAswWB2gknUHNVw5hzhOJEYXSJUHhUNlxuuczs9Z5Ty2Weltr1kF8j4UegFeO/pklf8hRQyd5zy2UOlDqfmh+ZOkxmDyIJlBEoAi0yo5J955bLHCZ1ubhpXOogmX1AoNGYxyx88TVN+pKngEr2nlsuc5DU9fLQUalDZPYipECZhW8xfR3oD1v/bRj/NU36kqeASvaeWy5ziNTaAvsxqQNk9iOoQO2H/BqZx51Ixdc06UueAirZe265zAjUo7jbIb9Gpgr0m/eOvjP9Xvjia5r0JU8Blew9t1zmCalrY65aoPZDfo1MfpjIVyGexlR8TZO+5Cmgkr3nlsvsn7pR5qoFaj/k18j054F+9dNtY/6g+4/R+K9p0pc8BVSy99xymb1T685c8ySS/ZBfI/N4In3xNU36kqeASvaeWy6zb+r2qLPtTzeXLnCnq+JgA4EqVCKQWy5zGIEq058OBl3gTlfFwQYCVahEILdc5kAC7flkZ2rPzNNBoNFAoAqVCOSWyxxcoM4zSgvc6ao42ECgCpUI5JbLHGQSqe/vPef2RmrfzJNBoNFAoAqVCOSWyxxiGVPPn/tnl9qpvTNPBYFGA4EqVCKQWy5ziIX0nb/W2hw6m1/mTisEOgQCVahEILdc5vCpe/zZa9DF7nQ0RyQAAlWoRCC3XOYIqc0TeAS6HhCoQiUCueUyx0jdmkGyTigtdqejOSIBEKhCJQK55TJHTT04obTYnY7miARAoAqVCOSWyxw3ddefjUEXu9PRHJEACFShEoHccpkjpx64HrrYnY7miARAoAqVCOSWyxw7te166IJ3OpojEgCBKlQikFsu895SI9A1gEAVKhHILZcZgXoUBxsIVKESgdxymfeXmkmkFYBAFSoRyC2XeY+pWcaUPghUoRKB3HKZ95mahfTJg0AVKhHILZdZMLVcZgQaCwSqUIlAbrnMCNSjONhAoAqVCOSWy4xAPYqDDQSqUIlAbrnMCNSjONhAoAqVCOSWy4xAPYqDDQSqUIlAbrnMUqltz6nfBwg0GghUoRKB3HKZhVLbf+ljDyDQaCBQhUoEcstllkk99FtJ8UGg0UCgCpUI5JbLLJJ68Kc+4oNAo4FAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpmZRPIoDjYQqEIlArnlMrOMyaM42ECgCpUI5JbLzEJ6j+JgA4EqVCKQWy4zt3J6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccplnIdA9T8kj0GggUIVKBHLLZZ6DQPe9KBSBRgOBKlQikFsu8wwE2r4taQ8uRaDRQKAKlQjklsssL9D2jfH7GI0i0GggUIVKBHLLZZ6ZQPdykzwCjQYCVahEILdc5nkJdD+PaUKg0UCgCpUI5JbLjEA9ioMNBKpQiUBuuczyAtVP2w2BRjIpAo0GAlWoRCC3XOYZCFSbONrPhBICjQYCVahEILdc5jkIVBtpdv0ZwaAINBoIVKESgdxymWchUA3baDRoZgQaCwSqUIlAbrnMcxNoMxpFoAsEgSpUIpBbLvPsBFqDQBcIAlWoRCC3XGYE6lEcbCBQhUoEcstlnq9AzUmkcCpFoNFAoAqVCOSWyzxjgaqOPwMZFIFGA4EqVCKQWy7znAWqOv4MY1AEGg0EqlCJQG65zLMWaEPQC6IINBoIVKESgdxymRGoR3GwgUAVKhHILZd5mQKdZlIEGg0EqlCJQG65zIsU6MSxKAKNBgJVqEQgt1zmhQg06E3yCDQaCFShEoHccpmXItCQN8kj0GggUIVKBHLLZV6MQAPeJI9Ao4FAFSoRyC2XeTkCrUGg8wWBKlQikFsuMwL1KA42EKhCJQK55TIvUKBMIs0XBKpQiUBuucxLFCjLmGYLAlWoRCC3XOZFCpSF9HMFgSpUIpBbLvMyBaozXqYINBoIVKESgdxymRcvUI/TeQQaDQSqUIlAbrnMSxeoz4QSAo0GAlWoRCC3XOaFC9RrSRMCjQYCVahEILdcZgQ6mmiOSAAEqlCJQG65zAh0NNEckQAIVKESgdxymRHoaKI5IgEQqEIlArnlMi9coEwizQsEqlCJQG65zEsXKMuYZgUCVahEILdc5sULlIX0cwKBKlQikFsu8/IF6pEZgcYCgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mADgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mADgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mADgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mADgSpUIpBbLjMC9SgONhCoQiUCueUyI1CP4mADgSpUIpBbLjMC9SgONhCoQiUCueUypyVQtweLINBoIFCFSgRyy2VOSqCOj7ZDoNFAoAqVCOSWy5ySQF0froxAo4FAFSoRyC2XOSGBOv+8BwKNBgJVqEQgt1xmBDqaaI5IAASqUIlAbrnMCHQ00RyRAAhUoRKB3HKZEehoojkiARCoQiUCueUyJyRQJpHkQaAKlQjklsuckkBZxiQOAlWoRCC3XOakBMpCemkQqEIlArnlMqclUMfMCDQWCFShEoHccpkRqEdxsIFAFSoRyC2XOWGBWs/nEWg0EKhCJQK55TKnK1D7jBICjQYCVahEILdc5mQFOrCmCYFGA4EqVCKQWy5zqgIdWlWPQKOBQBUqEcgtlxmBjiaaIxIAgSpUIpBbLjMCHU00RyQAAlWoRCC3XGYEOppojkgABKpQiUBuucypCpRJJBEQqEIlArnlMicrUJYxSYBAFSoRyC2XOV2BspBegHgCBQBIHEagirGYQG65zAmPQO2ZGYHGAoEqVCKQWy4zAvUoDjYQqEIlArnlMiNQj+JgA4EqVCKQWy7zSgTamlCshobMAAAKAUlEQVRCoNFAoAqVCOSWy7wOgbaXNCHQaCBQhUoEcstlXoVAjUX1CDQaCFShEoHccpnXIFDjtk63H06yE80RCYBAFSoRyC2XeX0CdfzpTjvRHJEACFShEoHccplXJ1DXH4+3E80RCYBAFSoRyC2XeW0CHXpKkyPRHJEACFShEoHccpnXIFDVMwBFoFFAoAqVCOSWy7wKgWrXPRFoVBCoQiUCueUyr0Ogzcw7Ao0KAlWoRCC3XOaVCLSBSaSYIFCFSgRyy2VenUBZxhQTBKpQiUBuuczrEygL6SOCQBUqEcgtl3mFAuVWznggUIVKBHLLZUagHsXBBgJVqEQgt1xmBOpRHGwgUIVKBHLLZUagHsXBBgJVqEQgt1xmBOpRHGwgUIVKBHLLZV67QD2m5KM5IgEQqEIlArnlMq9coD6LQqM5IgEQqEIlArnlMq9boF63JUVzRAIgUIVKBHLLZV61QP1ujI/miARAoAqVCOSWy4xAEWhAEKhCJQK55TIjUAQaEASqUIlAbrnMCBSBBgSBKlQikFsu86oFyiRSaBCoQiUCueUyr1ugLGMKDAJVqEQgt1zmlQuUhfRhQaAKlQjklsu8doF6FQcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcbCFShEoHccpkRqEdxsIFAFSoRyC2XGYF6FAcb8QS6IP7sz6RrIAF7vRpWudP7AYGer7V/sderYZU7vR8Q6Pla+xd7vRpWudP7AYGer7V/sderYZU7vR8Q6Pla+xd7vRpWudP7AYGer7V/sderYZU7vR8Q6Pla+xd7vRpWudP7AYGer7V/sderYZU7vR8QKACAJwgUAMATBAoA4AkCBQDwBIECAHiCQAEAPEGgAACeIFAAAE/WJ9Cv3/pe+eqrvzs6eul//UPx5ptf3Tg6+p/+vnzz0+2bH3wiUr84WPY6e1PvaGJ7/ftsR3v3zf5m8dh32v4JTGB9Ar1zVKrkX49yvvPr7M1XbxXv/mP25uvizbd/LVfL0PTv9Zc38jcv/Sx7k9he/+rItm/2N4vHvtP2T2AKaxPoN3eOSpVs5fHdT7YDz6Pvbkdj37x39J3tm/+n6GB3sk++ei//JAnse63taFp7/cXRS9vTie3u5Ja4Y93RpPbavtMDzQFTWJlAf/+3R5VK7pTd587Rj7L+Vfxr/Hn24Zc38jdfv1X8c718bHvd2tG09nr7b8OPsv9ux1qDO5rUXtt3eqA5YBLrEujn23P0fy1UUnWprTu/17wpt/pe+d8f7r+KEbDtdfF/1R/T2uuv3yrPT+9ku9PaN/ubpWPf6YHmgEmsTKDf+S+NNcp/fr+88d0/1P0r544umQSw7XV7JJLaXpfkxmjtm/1NMnR3evcn4MW6BJrRp5Lsf//6Px8dbU1jSiYRegVaXwP9XqJ7XZ/AavtmfyNWydB0d3r3J+DHagVaz0tnVwW3PemnxSzlDxNVSd9eZ2u3iqUHf0h0r8uz1bUJtLvTuz8BP9Yr0C9vZOLIFPLtX39RWGT7pv0PdDrrPPr2evvub4s1TZ+cp7nX2eTzz4x9s78Rq2VgenZ65yfgyXoFms2tZPyn7T/DXxyVl9Pv5DNKCf4D3bfXjU1TPa/74sZL2dW+dY1A+3Z61yfgy4oFmq/u+Q+fFNdAEz+oeve6mFE4T/efjc/LdeOrEmjvTu/4BLxZs0Cb9/W5TP4ixUnKvr1uH0jp7fWvjqp1jiuahbfs9OAn4A8CzYZhtUq+yOZWquVxKS2TG9zrXKCp7fU3d8r7Vc/P2/tmf7N8rDs98AlMYb0CLXtPcfbeTE7/MM0bNSx73ZzCJ7fXd7QbFVdyJ9LATg98AlNYr0CLu4N/fyOXyJc3smfTFNMp5Y3xad0q3LvXX2hrD1Lb68/1/Wjtm/3N4rHvtP0TmMR6BVo9n6boRF+UzyXKLw59ld7Davr3upySLwaiSe11+byho/IhAK19s79ZOPadHmoOmMKKBXqe3XtUPQH0/KvsCYn/4ZPqTfaYzJT+ebbs9f+bPQ80xb3+4qhljPa+2d8sG/tODzYHTGB9AgUACAQCBQDwBIECAHiCQAEAPEGgAACeIFAAAE8QKACAJwgUAMATBAoA4AkCBQDwBIECAHiCQAEAPEGgAACeIFAY4nizudS8O7u12bwhVxmAuYFAYYgnL+vKPGnpFGD1IFAY5HSzeeqX5euHh81rAECgsIvtSfyLxStO4AEMECgMsz2JP/hJ/ooTeAADBAo72J7EP33/PDdp/l8AqECgsIPszD07iT+uRqJbHr19uNkcPP9x9f7T7P3m8mv3ywJv3Lu62Vz4SU80gJRAoLCLh4eZOk/ra6H5yXzBC/nbs/er9xezOaatQK9nb5hwguRBoLCT7OLn1or1Cfz2fTb4fPx+adDt+xe2nz26WlwkzYasW+M+eleuxgD7AYHCTjIjXm5O4Lcj0nIy6ST/45OXy/flVVJm62E1IFDYzcPsCqd2Al+dnG9VeSmbZSrdun2bfVL+ByB9ECg4cLJpTuALaxYctyfmjyuBMl0P6wCBggPbIWg9AM3u7myoxpqPP73942c3lUBZLwrrAIGCAzsEevdZ/S0ChdWAQMEBQ6BtP2aTRpvN5ev/+LtjBArrAoGCA7pAO5c4y1VM59o1UAQK6wCBggO6QLVbknKXNkLdjk0RKKwKBAoOtAS6fVMa8zRb8NkI9IRroLAyECg40BJoJsqL725F+UGxuKk8hf/06ia/AwmBwnpAoOBAW6DNvfDFY5qulu+e/yC/BQmBwmpAoOCAIdDzR29nC5eulHe7n334bPZspo/KCXoECqsBgQIAeIJAAQA8QaAAAJ4gUAAATxAoAIAnCBQAwBMECgDgCQIFAPAEgQIAeIJAAQA8QaAAAJ4gUAAATxAoAIAnCBQAwBMECgDgCQIFAPAEgQIAeIJAAQA8QaAAAJ4gUAAAT/5/4Je+yc4wS18AAAAASUVORK5CYII=" width="672" /></p>
+<ul>
+<li>Japan’s median age becam higher compared to Australia from the mid
+1960’s<br />
+</li>
+<li>While population growth in both countries has generally been
+declining from 1950, major divergence occurs from the late 1970s where
+year on year decrease in Japan’s population growth rate is seen, even
+after it first enters negative growth in 2005.</li>
+</ul>
+</div>
+<div id="section-7-conclusion" class="section level2">
+<h2>Section 7: Conclusion</h2>
+<p>Based on the data of population growth and median age between 1950
+and 2021, while Australia has witnessed a steady decrease in population
+growth since the early 1960, the year on year decrease in growth over
+the past few decades has been relatively mild compared to Japan where
+population decline has become a major issue.<br />
+From 1950 when the measure was first available, Japan started with a
+much lower median age and a higher population growth rate. However after
+a period of relative stability (and even growth over some years) until
+the 1970s, year on year decrease in growth rate begun to accelerate,
+resulting in negative growth from the mid 2000s. Australia on the other
+hand have fared better with a much lower year on year decrease in growth
+rate and have yet to experience negative growth.</p>
 </div>
 
 
